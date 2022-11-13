@@ -1,0 +1,66 @@
+:root {
+    --blue: #1FA6EB;
+    --darkGrey: #383838;
+    --lightGrey: #707070;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Righteous', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+hr{
+  width: 90%;
+  color: #ffffff;
+}
+
+.dark-hr{
+  color: var(--lightGrey);
+}
+
+.hundred-hr{
+  width: 100%;
+}
+
+
+
+
+/* Fonts */
+h1{
+  color: var(--darkGrey);
+}
+h2{
+  color: var(--darkGrey);
+}
+h3{
+  color: var(--darkGrey);
+}
+p{
+  color: var(--lightGrey);
+}
+
+.light-color{
+  color: var(--lightGrey);
+}
+.dark-color{
+  color: var(--darkGrey);
+}
+
+.big{
+  font-weight: bold;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+
+#main{
+  width: 90%;
+  margin: 2vh auto 0 auto;
+}

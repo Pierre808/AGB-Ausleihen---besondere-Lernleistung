@@ -1,0 +1,11 @@
+CRITICAL - 2022-11-12 05:38:41 --> Class "Home" does not exist
+in SYSTEMPATH\Debug\Toolbar\Collectors\Routes.php on line 71.
+ 1 SYSTEMPATH\Debug\Toolbar\Collectors\Routes.php(71): ReflectionMethod->__construct('Home', '_remap')
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\BaseCollector.php(222): CodeIgniter\Debug\Toolbar\Collectors\Routes->display()
+ 3 SYSTEMPATH\Debug\Toolbar.php(93): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+ 4 SYSTEMPATH\Debug\Toolbar.php(374): CodeIgniter\Debug\Toolbar->run(1668253121.768962, 0.0278, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 5 SYSTEMPATH\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\Filters\Filters->run('ROOTPATH\\public', 'after')
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
