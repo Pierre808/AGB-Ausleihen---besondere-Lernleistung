@@ -1,0 +1,14 @@
+.container-list{
+    /*TODO: style*/
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.16);
+    padding: 2% 5%;
+}
+
+.container p{
+    color: var(--darkGrey);
+}

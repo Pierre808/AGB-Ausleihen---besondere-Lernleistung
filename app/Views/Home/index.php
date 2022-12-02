@@ -4,13 +4,20 @@
 
 
 <?= $this->section("headerLinks")?> 
-<link rel="stylesheet" href="<?= base_url('public/css/home.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/containers.css') ?>">
 <?= $this->endSection() ?>
 
 
 <?= $this->section("content") ?>
     <div id="main">
-        MAIN
+        <h1>Überfällige Ausleihen:</h1>
 
+        <div class="containers-list">
+            <div class="container">
+                <p><span  class="big">Name Schüler: </span> Max Mustermann</p>
+                <p><span  class="big">Gegenstand: </span> Kamera</p>
+                <p><span  class="big">Überfällig seit: </span> 12.11.2022</p>
+            </div>
+        </div>
     </div>
 <?= $this->endSection() ?>

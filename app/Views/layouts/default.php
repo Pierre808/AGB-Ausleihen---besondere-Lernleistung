@@ -32,9 +32,16 @@
 
     <div id="menu">
         <div class="menu-links">
+            <h2>Ausleihen:</h2>
             <a href="<?= base_url('alle-ausleihen') ?>">Alle Ausleihen anzeigen</a>
-                
-            <a href="<?= base_url('add-ausleihe') ?>">Neue Ausleihe hinzufügen</a>
+            <a href="<?= base_url('add-ausleihe') ?>">Neue Ausleihe erstellen</a>
+
+            <h2 class="margin">Gegenstände:</h2>
+            <a href="<?= base_url('alle-gegenstande') ?>">Registrierte Gegenstände anzeigen</a>
+            <a href="<?= base_url('add-gegenstand') ?>">Neuen Gegenstand registrieren</a>
+
+            <h2 class="margin">Schüler:</h2>
+            <a href="<?= base_url('alle-schuler') ?>">Registrierte Schüler anzeigen</a>
         </div>
     </div>
 

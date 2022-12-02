@@ -1,17 +1,23 @@
 #navbar{
     height: 10vh;
     width: 100%;
-    background-color: var(--blue);
+    background-color: var(--main);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 500;
 }
 
 #navTitle{
     height: 100%;
     width: auto;
     margin-left: 5%;
+    display: flex;
+    align-items: center;
 }
 
 #navTitle h1{
@@ -45,7 +51,7 @@
     top: 10vh;
     height: 90vh;
     width: 100%;
-    background-color: var(--blue);
+    background-color: var(--seccond);
     z-index: 110;
     position: fixed;
     border-top: 1px solid #ffffff;
@@ -59,18 +65,27 @@
 }
 
 #menu .menu-links{
-    width: 50%;
+    width: 85%;
     margin: 5% auto 0 auto;
 }
 
-.menu-links a{
+.menu-links a, .menu-links h2{
     color: #ffffff;
     text-align: center;
 }
 
 .menu-links a{
-    font-size: 1.5em;
+    font-size: 1.3em;
     display: block;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
+    margin-top: 2vh;
+}
+
+.menu-links h2{
+    font-size: 1.5em;
+    margin-bottom: 3vh;
+    text-decoration: underline;
+}
+
+.menu-links .margin{
+    margin-top: 10vh;
 }
