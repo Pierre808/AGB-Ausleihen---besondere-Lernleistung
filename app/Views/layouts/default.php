@@ -31,40 +31,108 @@
     </div>
 
     <div id="menu">
+        <div id="closeBtn" class="close">
+            <img src="<?= base_url("public/imgs/close.png") ?>" onclick="hideMenu()"/>
+        </div>
+
         <div class="menu-links">
-            <h2>Ausleihen:</h2>
-            <a href="<?= base_url('alle-ausleihen') ?>">Alle Ausleihen anzeigen</a>
-            <a href="<?= base_url('add-ausleihe') ?>">Neue Ausleihe erstellen</a>
+            <a href="<?= base_url() ?>">
+                <div id="home" class="menu-link <?php if(esc($menuName) == "home"){echo("active");} ?>">
+                    <img src="<?= base_url("public/imgs/home.png") ?>"/>
+                    <p>Home</p>
+                </div>
+            </a>
 
-            <h2 class="margin">Gegenstände:</h2>
-            <a href="<?= base_url('alle-gegenstande') ?>">Registrierte Gegenstände anzeigen</a>
-            <a href="<?= base_url('add-gegenstand') ?>">Neuen Gegenstand registrieren</a>
+            <a href="<?= base_url("all-ausleihen") ?>">
+                <div class="menu-link">
+                    <img src="<?= base_url("public/imgs/home.png") ?>"/>
+                    <p>Alle Ausleihen</p>
+                </div>
+            </a>
 
-            <h2 class="margin">Schüler:</h2>
-            <a href="<?= base_url('alle-schuler') ?>">Registrierte Schüler anzeigen</a>
+            <a href="<?= base_url("all-gegenstande") ?>">
+                <div class="menu-link">
+                    <img src="<?= base_url("public/imgs/home.png") ?>"/>
+                    <p>Registrierte Gegenstände</p>
+                </div>
+            <a>
+
+            
+            <div id="addBtn" class="menu-link" onclick="calcMenu()">
+                <img src="<?= base_url("public/imgs/add.png") ?>"/>
+                <p>Hinzufügen</p>
+            </div>
+
+            <div id="ausleiheBtn" class="subordered">
+                <a href="<?= base_url("add-ausleihe") ?>">    
+                    <p>Ausleihe erstellen</p>
+                </a>        
+            </div>
+            
+            <div id="gegenstandBtn" class="subordered">
+                <a href="<?= base_url("add-gegenstand") ?>">
+                <p>Gegenstand hinzufügen</p>
+            </div>
         </div>
     </div>
 
 
 
     <script>
+        var closeBtn = document.getElementById("closeBtn");
+
+        var navMenu = document.getElementById("navMenu");
+        var menu = document.getElementById("menu");
+
+        
+        var addBtn = document.getElementById("addBtn");
+        var ausleiheBtn = document.getElementById("ausleiheBtn");
+        var gegenstandBtn = document.getElementById("gegenstandBtn");
+        var lastActive = "home";
+
         function showMenu() {
-            var navMenu = document.getElementById("navMenu");
-            var menu = document.getElementById("menu");
 
+            navMenu.classList.add("rotate");
+            menu.style.top = "0vh";
+            document.body.style.overflow = "hidden"
+        }
 
-            if (navMenu.classList.contains("rotate")) {
-                navMenu.classList.remove("rotate");
-                menu.style.top = "-100vh";
-                document.body.style.overflow = "auto"
-            } 
-            else {
-                navMenu.classList.add("rotate");
-                menu.style.top = "10vh";
-                document.body.style.overflow = "hidden"
+        async function hideMenu() {
+            closeBtn.classList.add("rotate");
+            await new Promise(resolve => setTimeout(resolve, 100));
+
+            menu.style.top = "-100vh";
+            document.body.style.overflow = "auto"
+
+            hideAddLinks();
+            
+            await new Promise(resolve => setTimeout(resolve, 700));
+
+            closeBtn.classList.remove("rotate");
+            navMenu.classList.remove("rotate");
+        }
+
+        function calcMenu(){
+            if(ausleiheBtn.style.display == "block"){
+                hideAddLinks();
+            }
+            else{
+                showAddLinks();
             }
         }
 
+        function showAddLinks() {
+
+            addBtn.classList.add("active");
+            ausleiheBtn.style.display = "block";
+            gegenstandBtn.style.display = "block";
+        }
+
+        function hideAddLinks() {
+            addBtn.classList.remove("active");
+            ausleiheBtn.style.display = "none";
+            gegenstandBtn.style.display = "none";
+        }
     </script>
     
 
@@ -72,3 +140,4 @@
 
 </body>
 </html>
+

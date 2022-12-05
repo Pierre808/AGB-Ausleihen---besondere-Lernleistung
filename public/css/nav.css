@@ -6,10 +6,6 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
-    position: relative;
-    left: 0;
-    top: 0;
-    z-index: 500;
 }
 
 #navTitle{
@@ -48,13 +44,12 @@
 
 #menu{
     position: absolute;
-    top: 10vh;
-    height: 90vh;
+    top: 0vh;
+    height: 100%;
     width: 100%;
-    background-color: var(--seccond);
+    background-color: var(--main);
     z-index: 110;
     position: fixed;
-    border-top: 1px solid #ffffff;
     top: -100vh;
     
     transition: all 1s;
@@ -64,28 +59,67 @@
     -o-transition: all 1s;
 }
 
+#menu .close{
+    width: 5vh;
+    height: 5vh;
+    position: relative;
+    top: 2vh;
+    left: calc(100% - 5vh - 5vw);
+}
+
+#menu .close img{
+    width: 100%;
+    height: 100%;
+
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
 #menu .menu-links{
-    width: 85%;
+    width: 90%;
     margin: 5% auto 0 auto;
-}
-
-.menu-links a, .menu-links h2{
-    color: #ffffff;
-    text-align: center;
-}
-
-.menu-links a{
-    font-size: 1.3em;
-    display: block;
-    margin-top: 2vh;
-}
-
-.menu-links h2{
-    font-size: 1.5em;
-    margin-bottom: 3vh;
-    text-decoration: underline;
-}
-
-.menu-links .margin{
     margin-top: 10vh;
+}
+
+.menu-links p{
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.menu-links .menu-link{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+    border-radius: 12px;
+    padding: 0% 10%;
+}
+.menu-links .active{
+    background-color: var(--seccond);
+}
+
+.menu-links .menu-link:hover{
+    background-color: var(--seccond);
+    cursor: pointer;
+}
+
+
+.menu-links .menu-link img{
+    height: 60%;
+    width: auto;
+}
+
+.menu-links .subordered{
+    display: none;
+    margin-left: 15vw;
+}
+
+.menu-links .subordered:hover{
+    text-decoration: underline;
+    color: #ffffff;
 }

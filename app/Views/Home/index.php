@@ -18,6 +18,7 @@
                 <p><span  class="big">Gegenstand: </span> Kamera</p>
                 <p><span  class="big">Überfällig seit: </span> 12.11.2022</p>
             </div>
+            
         </div>
     </div>
 <?= $this->endSection() ?>

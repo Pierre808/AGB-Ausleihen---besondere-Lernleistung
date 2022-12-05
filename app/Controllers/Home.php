@@ -15,6 +15,7 @@ class Home extends BaseController
     public function index()
     {
         $data['page_title'] = "Home";
+        $data['menuName'] = "home";
         
 
         return view('Home/index', $data);
