@@ -39,37 +39,46 @@
             <a href="<?= base_url() ?>">
                 <div id="home" class="menu-link <?php if(esc($menuName) == "home"){echo("active");} ?>">
                     <img src="<?= base_url("public/imgs/home.png") ?>"/>
-                    <p>Home</p>
+                    <p>Start Seite</p>
                 </div>
             </a>
 
             <a href="<?= base_url("all-ausleihen") ?>">
-                <div class="menu-link">
+                <div class="menu-link <?php if(esc($menuName) == "ausleihen"){echo("active");} ?>">
                     <img src="<?= base_url("public/imgs/home.png") ?>"/>
                     <p>Alle Ausleihen</p>
                 </div>
             </a>
 
             <a href="<?= base_url("all-gegenstande") ?>">
-                <div class="menu-link">
+                <div class="menu-link <?php if(esc($menuName) == "gegenstande"){echo("active");} ?>">
                     <img src="<?= base_url("public/imgs/home.png") ?>"/>
                     <p>Registrierte Gegenstände</p>
                 </div>
             <a>
 
             
-            <div id="addBtn" class="menu-link" onclick="calcMenu()">
+            <div id="addBtn" class="menu-link <?php if(esc($menuName) == "add"){echo("active");} ?>" 
+            onclick="calcMenu()">
                 <img src="<?= base_url("public/imgs/add.png") ?>"/>
                 <p>Hinzufügen</p>
             </div>
 
-            <div id="ausleiheBtn" class="subordered">
+            <div id="ausleiheBtn" class="subordered <?php if(esc($menuName) == "add"){
+                if(esc($menuTextName) == "ausleihe"){
+                    echo("active-text");
+                }
+            } ?>">
                 <a href="<?= base_url("add-ausleihe") ?>">    
                     <p>Ausleihe erstellen</p>
                 </a>        
             </div>
             
-            <div id="gegenstandBtn" class="subordered">
+            <div id="gegenstandBtn" class="subordered <?php if(esc($menuName) == "add"){
+                if(esc($menuTextName) == "gegenstand"){
+                    echo("active-text");
+                }
+            } ?>">
                 <a href="<?= base_url("add-gegenstand") ?>">
                 <p>Gegenstand hinzufügen</p>
             </div>
@@ -91,10 +100,15 @@
         var lastActive = "home";
 
         function showMenu() {
-
             navMenu.classList.add("rotate");
             menu.style.top = "0vh";
             document.body.style.overflow = "hidden"
+
+            <?php if(esc($menuName) == "add"){
+            ?>
+                showAddLinks();
+            <?php
+            } ?>
         }
 
         async function hideMenu() {
@@ -123,13 +137,13 @@
 
         function showAddLinks() {
 
-            addBtn.classList.add("active");
+            //addBtn.classList.add("active");
             ausleiheBtn.style.display = "block";
             gegenstandBtn.style.display = "block";
         }
 
         function hideAddLinks() {
-            addBtn.classList.remove("active");
+            //addBtn.classList.remove("active");
             ausleiheBtn.style.display = "none";
             gegenstandBtn.style.display = "none";
         }

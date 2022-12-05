@@ -37,7 +37,11 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/about', 'About::index');
+$routes->get('/all-ausleihen', 'Ausleihe::alleAusleihen');
+$routes->get('/add-ausleihe', 'Ausleihe::ausleiheErstellen');
+
+$routes->get('/all-gegenstande', 'Gegenstand::registrierteGegenstande');
+$routes->get('/add-gegenstand', 'Gegenstand::gegenstandRegistrieren');
 
 /*
  * --------------------------------------------------------------------

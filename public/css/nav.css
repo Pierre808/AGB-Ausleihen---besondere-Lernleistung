@@ -123,3 +123,8 @@
     text-decoration: underline;
     color: #ffffff;
 }
+
+.menu-links .active-text{
+    text-decoration: underline;
+    color: #ffffff;
+}
