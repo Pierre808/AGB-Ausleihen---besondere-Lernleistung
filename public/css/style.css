@@ -16,37 +16,7 @@ body{
   box-sizing: border-box;
 }
 
-
-hr{
-  width: 90%;
-  color: #ffffff;
-}
-
-.dark-hr{
-  color: var(--lightGrey);
-}
-
-.hundred-hr{
-  width: 100%;
-}
-
-
-
-
-/* Fonts */
-h1{
-  color: var(--darkGrey);
-}
-h2{
-  color: var(--darkGrey);
-}
-h3{
-  color: var(--darkGrey);
-}
-p{
-  color: var(--lightGrey);
-}
-
+/* colors */
 .light-color{
   color: var(--lightGrey);
 }
@@ -54,9 +24,11 @@ p{
   color: var(--darkGrey);
 }
 
+/* clases */
 .big{
   font-weight: bold;
 }
+
 
 
 a{
@@ -72,4 +44,14 @@ a{
 #main h1{
   margin-top: 5vh;
   font-size: 1.4em;
+  color: var(--darkGrey);
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+  .mobile-only{
+    display: none;
+  }
 }

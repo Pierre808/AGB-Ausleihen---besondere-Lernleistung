@@ -80,7 +80,8 @@
                 }
             } ?>">
                 <a href="<?= base_url("add-gegenstand") ?>">
-                <p>Gegenstand hinzufügen</p>
+                    <p>Gegenstand hinzufügen</p>
+                </a>
             </div>
         </div>
     </div>
