@@ -43,6 +43,8 @@ $routes->get('/add-ausleihe', 'Ausleihe::ausleiheErstellen');
 $routes->get('/all-gegenstande', 'Gegenstand::registrierteGegenstande');
 $routes->get('/add-gegenstand', 'Gegenstand::gegenstandRegistrieren');
 
+$routes->get('/add-schueler', 'Schueler::schuelerHinzufuegen');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

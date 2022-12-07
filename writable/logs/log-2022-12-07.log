@@ -1,0 +1,9 @@
+CRITICAL - 2022-12-07 04:58:29 --> Invalid file: Schueler/schuelerHinzufuegen.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Schueler/schuelerHinzufuegen.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerHinzufuegen', [], true)
+ 3 APPPATH\Controllers\Schueler.php(22): view('Schueler/schuelerHinzufuegen', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

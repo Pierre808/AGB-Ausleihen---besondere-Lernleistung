@@ -13,10 +13,13 @@
     <div id="main">
         <h1 id="title">Ausleihe erstellen:</h1>
 
-        <div class="warning mobile-only">
+        <div class="warning ">
             <p>
-                Bitte öffne diese Seite an dem Rechner im A-Turm Keller und scanne den 
+                Um einen Schülerausweis zu scannen wird ein Barcode-reader benötigt. <br>
+                Öffne diese Seite an dem Rechner im A-Turm Keller und scanne den 
                 Schülerausweis des Schülers ein.
+                <!--Bitte öffne diese Seite an dem Rechner im A-Turm Keller und scanne den 
+                Schülerausweis des Schülers ein.-->
             </p>
         </div>
         
@@ -72,7 +75,7 @@
 
                 await new Promise(resolve => setTimeout(resolve, 1800));
 
-                window.location.href = "<?= base_url("") ?>";
+                window.location.href = "<?= base_url("add-schueler") ?>";
             }
         }
 
