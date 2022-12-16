@@ -37,13 +37,14 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/all-ausleihen', 'Ausleihe::alleAusleihen');
-$routes->get('/add-ausleihe', 'Ausleihe::ausleiheErstellen');
+$routes->get('/all-leihgabe', 'Leihgabe::alleLeihgaben');
+$routes->get('/add-leihgabe', 'Leihgabe::leihgabeErstellen');
+$routes->get('/add-gegenstand-to-leihgabe/(:segment)', 'Leihgabe::gegenstandHinzufuegen/$1');
 
 $routes->get('/all-gegenstande', 'Gegenstand::registrierteGegenstande');
 $routes->get('/add-gegenstand', 'Gegenstand::gegenstandRegistrieren');
 
-$routes->get('/add-schueler', 'Schueler::schuelerHinzufuegen');
+$routes->match(['get', 'post'], '/add-schueler/(:segment)', 'Schueler::schuelerHinzufuegen/$1');
 
 /*
  * --------------------------------------------------------------------

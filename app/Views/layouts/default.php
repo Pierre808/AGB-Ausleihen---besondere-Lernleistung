@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <base href="<?= base_url() ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STG <?= $this->renderSection("title") ?> </title>
+    <title>AGB Leihgaben-Verwaltung <?= $this->renderSection("title") ?> </title>
     <link rel="stylesheet" href="<?= base_url('public/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('public/css/nav.css') ?>">
 
@@ -19,7 +19,7 @@
     <div id="navbar">
         <div id="navTitle">
             <a href="<?= base_url() ?>">
-                <h1>AGB - Ausleihen</h1>
+                <h1>AGB Leihgaben-Verwaltung</h1>
             </a>
         </div>
 
@@ -43,10 +43,10 @@
                 </div>
             </a>
 
-            <a href="<?= base_url("all-ausleihen") ?>">
-                <div class="menu-link <?php if(esc($menuName) == "ausleihen"){echo("active");} ?>">
+            <a href="<?= base_url("all-leihgabe") ?>">
+                <div class="menu-link <?php if(esc($menuName) == "leihgaben"){echo("active");} ?>">
                     <img src="<?= base_url("public/imgs/home.png") ?>"/>
-                    <p>Alle Ausleihen</p>
+                    <p>Alle Leihgaben</p>
                 </div>
             </a>
 
@@ -65,12 +65,12 @@
             </div>
 
             <div id="ausleiheBtn" class="subordered <?php if(esc($menuName) == "add"){
-                if(esc($menuTextName) == "ausleihe"){
+                if(esc($menuTextName) == "leihgabe"){
                     echo("active-text");
                 }
             } ?>">
-                <a href="<?= base_url("add-ausleihe") ?>">    
-                    <p>Ausleihe erstellen</p>
+                <a href="<?= base_url("add-leihgabe") ?>">    
+                    <p>Leihgabe erstellen</p>
                 </a>        
             </div>
             
@@ -100,8 +100,12 @@
         var gegenstandBtn = document.getElementById("gegenstandBtn");
         var lastActive = "home";
 
-        function showMenu() {
+        async function showMenu() {
+            menu.style.display = "block";
             navMenu.classList.add("rotate");
+
+            await new Promise(resolve => setTimeout(resolve, 50));
+
             menu.style.top = "0vh";
             document.body.style.overflow = "hidden"
 
@@ -114,6 +118,7 @@
 
         async function hideMenu() {
             closeBtn.classList.add("rotate");
+
             await new Promise(resolve => setTimeout(resolve, 100));
 
             menu.style.top = "-100vh";
@@ -122,6 +127,8 @@
             hideAddLinks();
             
             await new Promise(resolve => setTimeout(resolve, 700));
+
+            menu.style.display = "none";
 
             closeBtn.classList.remove("rotate");
             navMenu.classList.remove("rotate");

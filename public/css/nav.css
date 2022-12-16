@@ -14,6 +14,26 @@
     margin-left: 5%;
     display: flex;
     align-items: center;
+    font-size: 0.9em;
+}
+#navTitle:hover{
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+    #navTitle{
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width: 425px) {
+    #navTitle{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 350px) {
+    #navTitle{
+        font-size: 0.7em;
+    }
 }
 
 #navTitle h1{
@@ -25,6 +45,10 @@
     margin: 2vh 0;
     margin-right: 5%;
     display: inline;
+}
+#navMenu:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
 }
 #navMenu img{
     height: 100%;
@@ -57,6 +81,8 @@
     -moz-transition: all 1s;
     -ms-transition: all 1s;
     -o-transition: all 1s;
+
+    display: none;
 }
 
 #menu .close{
@@ -64,7 +90,11 @@
     height: 5vh;
     position: relative;
     top: 2vh;
-    left: calc(100% - 5vh - 5vw);
+    left: calc(100% - (5vw + 5vh));
+}
+#menu .close:hover{
+    transform: scale(1.2);
+    opacity: 0.8;
 }
 
 #menu .close img{

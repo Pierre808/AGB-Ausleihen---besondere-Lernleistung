@@ -10,7 +10,7 @@
 
 <?= $this->section("content") ?>
     <div id="main">
-        <h1>Überfällige Ausleihen:</h1>
+        <h1>Überfällige Leihgaben:</h1>
 
         <div class="containers-list">
             <div class="container">
