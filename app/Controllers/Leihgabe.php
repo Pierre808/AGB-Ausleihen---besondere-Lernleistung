@@ -44,7 +44,6 @@ class Leihgabe extends BaseController
         //if not then redirect to addschueler page
         if(SchuelerHelper::getById($schuelerId) == null)
         {
-            session()->setFlashdata('next-redirect', 'add-gegenstand-to-leihgabe/' . $schuelerId);
             return redirect()->to('add-schueler/' . $schuelerId);
         }
 

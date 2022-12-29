@@ -1,0 +1,168 @@
+CRITICAL - 2022-12-29 07:12:42 --> Invalid file: add-schueler/asdf.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('add-schueler/asdf.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('add-schueler/asdf', [], true)
+ 3 APPPATH\Controllers\Schueler.php(53): view('add-schueler/asdf', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('asdf')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 07:13:57 --> Invalid file: add-schueler/asdf.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('add-schueler/asdf.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('add-schueler/asdf', [], true)
+ 3 APPPATH\Controllers\Schueler.php(53): view('add-schueler/asdf', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('asdf')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 07:14:08 --> Invalid file: add-schueler/asdf.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('add-schueler/asdf.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('add-schueler/asdf', [], true)
+ 3 APPPATH\Controllers\Schueler.php(52): view('add-schueler/asdf', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('asdf')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 07:14:59 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in D:\xampp\htdocs\AGB\app\Controllers\Schueler.php on line 52
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Schueler.php(52): CodeIgniter\HTTP\RedirectResponse->to('add-schueler/asdf', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('asdf')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 07:20:24 --> Call to undefined method CodeIgniter\Validation\Validation::getErdrors()
+in APPPATH\Controllers\Schueler.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('asdf')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 07:23:00 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 46.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 07:23:32 --> Undefined variable $data
+in APPPATH\Controllers\Schueler.php on line 47.
+ 1 APPPATH\Controllers\Schueler.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Schueler.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('asdf')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 07:23:37 --> Undefined variable $data
+in APPPATH\Controllers\Schueler.php on line 47.
+ 1 APPPATH\Controllers\Schueler.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Schueler.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 08:10:47 --> Undefined property: CodeIgniter\View\View::$request
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 56.
+ 1 APPPATH\Views\Schueler\schuelerHinzufuegen.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$request', 'APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(56): view('Schueler/schuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 08:13:28 --> Undefined array key "mail"
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 56.
+ 1 APPPATH\Views\Schueler\schuelerHinzufuegen.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mail"', 'APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(63): view('Schueler/schuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 08:13:50 --> Undefined array key "mail"
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 56.
+ 1 APPPATH\Views\Schueler\schuelerHinzufuegen.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mail"', 'APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(63): view('Schueler/schuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 08:14:22 --> Undefined array key "mail"
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 56.
+ 1 APPPATH\Views\Schueler\schuelerHinzufuegen.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "mail"', 'APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(63): view('Schueler/schuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 08:14:50 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 56.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 08:15:36 --> Undefined array key "name"
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 45.
+ 1 APPPATH\Views\Schueler\schuelerHinzufuegen.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', 'APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(59): view('Schueler/schuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 08:16:51 --> array_key_exists() expects exactly 2 arguments, 1 given
+in APPPATH\Views\Schueler\schuelerHinzufuegen.php on line 45.
+ 1 APPPATH\Views\Schueler\schuelerHinzufuegen.php(45): array_key_exists('Bitte geben Sie einen Namen an')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(63): view('Schueler/schuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-29 08:36:09 --> There is no primary key defined when trying to make insert.
+in SYSTEMPATH\Model.php on line 269.
+ 1 SYSTEMPATH\Model.php(269): CodeIgniter\Database\Exceptions\DataException::forEmptyPrimaryKey('insert')
+ 2 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 3 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Libraries\SchuelerHelper.php(19): CodeIgniter\Model->insert([...])
+ 5 APPPATH\Controllers\Schueler.php(79): App\Libraries\SchuelerHelper::add('test asdf', null)
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-29 08:38:31 --> mysqli_sql_exception: Column 'mail' cannot be null in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `sc...', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sc...')
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sc...')
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sc...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\AGB\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\htdocs\AGB\app\Libraries\SchuelerHelper.php(20): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\htdocs\AGB\app\Controllers\Schueler.php(79): App\Libraries\SchuelerHelper::add('adsf', 'test asdf', NULL)
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+#11 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\AGB\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-12-29 08:38:31 --> Column 'mail' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `schueler` (`schueler_id`, `name`, `mail`) VALUES (\'adsf\', \'test asdf\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `schueler` (`schueler_id`, `name`, `mail`) VALUES (\'adsf\', \'test asdf\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `schueler` (`schueler_id`, `name`, `mail`) VALUES (\'adsf\', \'test asdf\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `schueler` (`schueler_id`, `name`, `mail`) VALUES (:schueler_id:, :name:, :mail:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\SchuelerHelper.php(20): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Schueler.php(79): App\Libraries\SchuelerHelper::add('adsf', 'test asdf', null)
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerHinzufuegen('adsf')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

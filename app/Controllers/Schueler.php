@@ -21,11 +21,66 @@ class Schueler extends BaseController
             return view('errors/html/error_404');
         }
         
+
+
         $data['page_title'] = "Ausleihe erstellen";
         $data['menuName'] = "add";
         $data['menuTextName'] = "ausleihe";
         
         $data['schuelerId'] = $schuelerId;
+
+        $data['errors'] = null;
+        
+
+        if($this->request->getMethod() == "post")
+        {
+            $validated = $this->validate([
+                'name' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'Bitte geben Sie einen Namen an'
+                    ]
+                ],
+                'mail' => [
+                    'rules' => 'valid_email',
+                    'errors' => [
+                        'valid_email' => 'Bitte geben Sie eine gültige Email Adresse an'
+                    ]
+                ],
+            ]);
+
+            if(!$validated)
+            {
+                $data['errors'] = $this->validator->getErrors();
+
+                
+                if($this->request->getPost('mail') == "")
+                {
+                    unset($data['errors']['mail']);
+                }
+
+                if(count($data['errors']) != 0)
+                {
+                    return view('Schueler/schuelerHinzufuegen', $data);
+                }
+            }
+
+            //add schueler to db and redirect if validation has no errors
+            echo('success');
+
+            $name = $this->request->getPost('name');
+            $mail = $this->request->getPost('mail');
+
+            if($mail == "")
+            {
+                $mail = null;
+            }
+
+            SchuelerHelper::add($schuelerId, $name, $mail);
+            return redirect()->to('add-gegenstand-to-leihgabe/' . $schuelerId);
+
+        }
+
 
         return view('Schueler/schuelerHinzufuegen', $data);
     }
