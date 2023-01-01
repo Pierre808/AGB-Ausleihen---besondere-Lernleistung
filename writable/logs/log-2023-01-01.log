@@ -1,0 +1,132 @@
+CRITICAL - 2023-01-01 06:39:14 --> syntax error, unexpected token ";"
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 69.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 3 APPPATH\Controllers\Leihgabe.php(62): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'OS', 'ROOTPATH\\public')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 06:54:11 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\Leihgabe.php on line 63.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 06:54:22 --> Class "App\Libraries\GegenstandHelper" not found
+in APPPATH\Controllers\Leihgabe.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'jkö', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 06:54:53 --> Class "App\Models\GegenstandModel" not found
+in APPPATH\Libraries\GegenstandHelper.php on line 27.
+ 1 APPPATH\Controllers\Leihgabe.php(46): App\Libraries\GegenstandHelper::getById('jkö')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'jkö', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 06:55:17 --> Class "App\Models\GegenstandModel" not found
+in APPPATH\Libraries\GegenstandHelper.php on line 27.
+ 1 APPPATH\Controllers\Leihgabe.php(46): App\Libraries\GegenstandHelper::getById('jkö')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'jkö', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 06:55:59 --> Undefined variable $schueler
+in APPPATH\Libraries\GegenstandHelper.php on line 30.
+ 1 APPPATH\Libraries\GegenstandHelper.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schueler', 'APPPATH\\Libraries\\GegenstandHelper.php', 30)
+ 2 APPPATH\Controllers\Leihgabe.php(47): App\Libraries\GegenstandHelper::getById('jkö')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'jkö', 'ROOTPATH\\public')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 07:01:41 --> syntax error, unexpected token "if", expecting "," or ";"
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 48.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 3 APPPATH\Controllers\Leihgabe.php(64): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'adsf', 'ROOTPATH\\public')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 07:04:14 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 65.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 3 APPPATH\Controllers\Leihgabe.php(64): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'adsf', 'ROOTPATH\\public')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 07:54:28 --> Call to undefined function form_open()
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 23.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 4 APPPATH\Controllers\Leihgabe.php(69): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('adsf', 'ROOTPATH\\public')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 09:33:02 --> Class "Time" not found
+in APPPATH\Views\Home\index.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Home/index', [], true)
+ 4 APPPATH\Controllers\Home.php(21): view('Home/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 16:36:58 --> date_default_timezone_set(): Timezone ID 'Germany' is invalid
+in SYSTEMPATH\CodeIgniter.php on line 189.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'date_default_timezone_set(): Timezone ID \'Germany\' is invalid', 'SYSTEMPATH\\CodeIgniter.php', 189)
+ 2 SYSTEMPATH\CodeIgniter.php(189): date_default_timezone_set('Germany')
+ 3 FCPATH\index.php(43): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-01-01 17:00:22 --> Call to undefined method App\Libraries\LeihtHelper::getByIds()
+in APPPATH\Controllers\Leihgabe.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'ABC-abc-1234', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 17:00:47 --> Non-static method App\Libraries\LeihtHelper::getActiveByIds() cannot be called statically
+in APPPATH\Controllers\Leihgabe.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'ABC-abc-1234', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 17:04:12 --> syntax error, unexpected token "<"
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 134.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 3 APPPATH\Controllers\Leihgabe.php(96): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'ABC-abc-1234', 'ROOTPATH\\public')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 17:04:56 --> Undefined variable $alreadyInDb
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 120.
+ 1 APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alreadyInDb', 'APPPATH\\Views\\Leihgabe\\gegenstandHinzufuegen.php', 120)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Leihgabe\\gegenstandHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Leihgabe.php(96): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'vuig', 'ROOTPATH\\public')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-01 17:05:17 --> Undefined variable $alreadyInDb
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 120.
+ 1 APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $alreadyInDb', 'APPPATH\\Views\\Leihgabe\\gegenstandHinzufuegen.php', 120)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Leihgabe\\gegenstandHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Leihgabe.php(96): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'tiuz', 'ROOTPATH\\public')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

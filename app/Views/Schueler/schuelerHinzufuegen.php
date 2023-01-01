@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="<?= base_url('public/css/containers.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/forms.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/spancolors.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/warning.css') ?>">
 <?= $this->endSection() ?>
 
 
@@ -14,7 +15,14 @@
     <div id="main">
         <h1 id="title">Schüler registrieren:</h1>
 
-        <div class="box-container">
+        <div class="warning ">
+                <p>
+                    Der Schüler ist noch nicht im System registriert.
+                </p>
+            </div>
+
+        <div class="box-container box-container-top">
+
             <h2>Schüler Daten</h2>
 
             <div class="box-container-top">
