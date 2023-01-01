@@ -36,6 +36,21 @@ class Leihgabe extends BaseController
         return view('Leihgabe/leihgabeErstellen', $data);
     }
 
+    public function leihgabeAnzeigen($id = false)
+    {
+        if($id == false)
+        {
+            return view('errors/html/error_404');
+        }
+        
+
+
+        $data['page_title'] = "Leihgabe";
+        $data['menuName'] = "leihgaben";
+
+        return view('Leihgabe/leihgabeAnzeigen', $data);
+    }
+
     //nachdem der schuelerausweis eingescannt wurde, wird diese seite aufgerufen (siehe leihgabe erstellen)
     public function gegenstandHinzufuegen($schuelerId = false, $gegenstandId = false)
     {
@@ -51,6 +66,8 @@ class Leihgabe extends BaseController
             
             $data['alreadyInDb'] = false;
 
+            $data['redirect'] = null;
+
             //found gegenstand and add it to leiht table in database
             if($gegenstand != null)
             {
@@ -62,7 +79,10 @@ class Leihgabe extends BaseController
                 }
                 else
                 {
-                    LeihtHelper::add($schuelerId, $gegenstandId);
+                    $rowId = LeihtHelper::add($schuelerId, $gegenstandId);
+
+
+                    $data['redirect'] = base_url('show-leihgabe/' . $rowId);
                 }
                 
             }

@@ -40,6 +40,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/all-leihgabe', 'Leihgabe::alleLeihgaben');
 $routes->get('/add-leihgabe', 'Leihgabe::leihgabeErstellen');
 $routes->get('/add-gegenstand-to-leihgabe/(:any)', 'Leihgabe::gegenstandHinzufuegen/$1/$2');
+$routes->get('/show-leihgabe/(:segment)', 'Leihgabe::LeihgabeAnzeigen/$1');
 
 $routes->get('/all-gegenstande', 'Gegenstand::registrierteGegenstande');
 $routes->get('/add-gegenstand', 'Gegenstand::gegenstandRegistrieren');
