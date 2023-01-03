@@ -28,6 +28,13 @@ body{
 .big{
   font-weight: bold;
 }
+.standart{
+  font-weight: normal;
+}
+
+.left-margin{
+  margin-left: 3vw;
+}
 
 
 

@@ -1,5 +1,9 @@
 .container-list{
-    /*TODO: style*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 3vh;
 }
 
 .container{
@@ -13,6 +17,13 @@
     color: var(--darkGrey);
 }
 
+.container .pList{
+    margin-bottom: 1em;
+}
+
+.container .pList p{
+    margin: 2%;
+}
 
 .box-container{
     width: 80%;
