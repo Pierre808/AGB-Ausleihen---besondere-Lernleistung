@@ -36,11 +36,20 @@ body{
   margin-left: 3vw;
 }
 
+.block{
+  display: block;
+}
+
+.width100{
+  width: 100%;
+}
 
 
 a{
   text-decoration: none;
 }
+
+
 
 
 #main{

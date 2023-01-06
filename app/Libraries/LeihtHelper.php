@@ -52,4 +52,13 @@ class LeihtHelper
         return $leiht;
     }
 
+    public static function getActiveDesc()
+    {
+        $leihtModel = new LeihtModel();
+
+        $leiht = $leihtModel->where("aktiv", 1)->orderBy("datum_start", "DESC")->FindAll();
+
+        return $leiht;
+    }
+
 }

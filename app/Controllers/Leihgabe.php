@@ -23,6 +23,20 @@ class Leihgabe extends BaseController
         $data['page_title'] = "Alle Leihgabe";
         $data['menuName'] = "leihgaben";
         
+        $activeLeihgaben = LeihtHelper::getActiveDesc();
+
+        for($i = 0; $i < count($activeLeihgaben); $i++)
+        {
+            $schueler = SchuelerHelper::getById($activeLeihgaben[$i]['schueler_id']);
+            $activeLeihgaben[$i]['schueler_name'] = $schueler['name'];
+
+            $gegenstand = GegenstandHelper::getById($activeLeihgaben[$i]['gegenstand_id']);
+            $activeLeihgaben[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
+
+            $activeLeihgaben[$i]['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $activeLeihgaben[$i]['datum_start']), "H:i d.m.Y");
+        }
+
+        $data['active'] = $activeLeihgaben;
 
         return view('Leihgabe/alleLeihgaben', $data);
     }
