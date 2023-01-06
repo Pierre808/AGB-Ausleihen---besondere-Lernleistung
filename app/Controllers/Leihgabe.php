@@ -33,7 +33,7 @@ class Leihgabe extends BaseController
             $gegenstand = GegenstandHelper::getById($activeLeihgaben[$i]['gegenstand_id']);
             $activeLeihgaben[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
 
-            $activeLeihgaben[$i]['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $activeLeihgaben[$i]['datum_start']), "H:i d.m.Y");
+            $activeLeihgaben[$i]['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $activeLeihgaben[$i]['datum_start']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
         }
 
         $data['active'] = $activeLeihgaben;
@@ -57,6 +57,37 @@ class Leihgabe extends BaseController
             return view('errors/html/error_404');
         }
         
+        $leihgabe = LeihtHelper::getById($id);
+        if($leihgabe['datum_ende'] == "")
+        {
+            $leihgabe['formated_datum_ende'] = "/";
+        }
+        else
+        {
+            $leihgabe['formated_datum_ende'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgabe['datum_ende']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
+        }
+
+        $leihgabe['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgabe['datum_start']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
+
+        $leihgabe['zurueck_string'] = "Nein";
+        $leihgabe['zurueck_color'] = "red";
+        if($leihgabe['aktiv'] == 0)
+        {
+            $leihgabe['zurueck_string'] = "Ja";
+            $leihgabe['zurueck_color'] = "green";
+        }
+        
+        $schueler = SchuelerHelper::getById($leihgabe['schueler_id']);
+        if($schueler['mail'] == "")
+        {
+            $schueler['mail'] = "/";
+        }
+
+        $gegenstand = GegenstandHelper::getById($leihgabe['gegenstand_id']);
+
+        $data['leihgabe'] = $leihgabe;
+        $data['schueler'] = $schueler;
+        $data['gegenstand'] = $gegenstand;
 
 
         $data['page_title'] = "Leihgabe";

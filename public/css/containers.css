@@ -17,6 +17,10 @@
     color: var(--darkGrey);
 }
 
+.container h2{
+    color: var(--darkGrey);
+}
+
 .container .pList{
     margin-bottom: 1em;
 }

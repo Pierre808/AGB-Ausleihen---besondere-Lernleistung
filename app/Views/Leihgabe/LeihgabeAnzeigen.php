@@ -13,34 +13,34 @@
     <div id="main">
         <h1>Infos zu der Leihgabe:</h1>
 
-        <!--TODO: database data-->
-        <!--TODO: container links-->
-
         <div class="container-list">
+            <a class="width100" href="<?= base_url('show-schueler/' . esc($schueler['schueler_id'])) ?>">
             <div class="container">
                 <h2>Schüler</h2>
                 <div class="pList">
-                    <p class="big">Name: <span class="standart left-margin">/</span></p>
-                    <p class="big">Mail: <span class="standart left-margin">/</span></p>
-                    <p class="big">Schüler-Id: <span class="standart left-margin">asdfjklö</span></p>
+                    <p class="big">Name: <span class="standart left-margin"><?= esc($schueler['name']) ?></span></p>
+                    <p class="big">Mail: <span class="standart left-margin"><?= esc($schueler['mail']) ?></span></p>
+                    <p class="big">Schüler-Id: <span class="standart left-margin"><?= esc($schueler['schueler_id']) ?></span></p>
                 </div>
             </div>
+            </a>
 
+            <a class="width100" href="<?= base_url('show-gegenstand/' . esc($gegenstand['gegenstand_id'])) ?>">
             <div class="container">
                 <h2>Gegenstand</h2>
                 <div class="pList">
-                    <p class="big">Bezeichnung: <span class="standart left-margin">asdfasdf</span></p>
-                    <p class="big">Id: <span class="standart left-margin">jklöjklö</span></p>
+                    <p class="big">Bezeichnung: <span class="standart left-margin"><?= esc($gegenstand['bezeichnung']) ?></span></p>
+                    <p class="big">Id: <span class="standart left-margin"><?= esc($gegenstand['gegenstand_id']) ?></span></p>
                 </div>
             </div>
+            </a>
 
             <div class="container">
                 <h2>Leihgabe</h2>
                 <div class="pList">
-                    <p class="big">Ausgeliehen am: <span class="standart left-margin">01.01.0001</span></p>
-                    <p class="big">Ausgeliehen bis: <span class="standart left-margin">01.01.0001</span></p>
-                    <p class="big">Zurückgegeben: <span class="standart left-margin red">Nein</span></p>
-                    <p class="big">Ausgeliehen bei: <span class="standart left-margin">adsfjklö</span></p>
+                    <p class="big">Ausgeliehen am: <span class="standart left-margin"><?= esc($leihgabe['formated_datum_start']) ?></span></p>
+                    <p class="big">Ausgeliehen bis: <span class="standart left-margin"><?= esc($leihgabe['formated_datum_ende']) ?></span></p>
+                    <p class="big">Zurückgegeben: <span class="standart left-margin <?= esc($leihgabe['zurueck_color']) ?>"><?= esc($leihgabe['zurueck_string']) ?></span></p>
                 </div>
             </div>
         </div>

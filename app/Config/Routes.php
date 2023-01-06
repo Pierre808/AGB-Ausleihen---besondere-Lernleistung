@@ -44,8 +44,11 @@ $routes->get('/show-leihgabe/(:segment)', 'Leihgabe::LeihgabeAnzeigen/$1');
 
 $routes->get('/all-gegenstande', 'Gegenstand::registrierteGegenstande');
 $routes->get('/add-gegenstand', 'Gegenstand::gegenstandRegistrieren');
+$routes->get('/show-gegenstand/(:segment)', 'Gegenstand::gegenstandAnzeigen/$1');
 
 $routes->match(['get', 'post'], '/add-schueler/(:segment)', 'Schueler::schuelerHinzufuegen/$1');
+$routes->get('/show-schueler/(:segment)', 'Schueler::schuelerAnzeigen/$1');
+
 
 /*
  * --------------------------------------------------------------------
