@@ -12,7 +12,7 @@
 
 .warning-bottom{
     position: absolute;
-    bottom: 5dvh;
+    bottom: 5vh;
     left: 0;
 }
 
@@ -39,4 +39,9 @@
     height: 7vh;
     width: auto;
     max-width: 30%;
+}
+
+.warning-green{
+    background-color: rgb(104, 199, 95);
+    border: 3px groove rgb(49, 163, 34);
 }

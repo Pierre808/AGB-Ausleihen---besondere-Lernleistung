@@ -61,4 +61,26 @@ class LeihtHelper
         return $leiht;
     }
 
+    public static function getUeberfaellig()
+    {
+        $leihtModel = new LeihtModel();
+
+        $leiht = $leihtModel->where("aktiv", "1")->FindAll();
+
+        $count = count($leiht);
+        for($i = 0; $i < $count; $i++)
+        {
+            $date = $leiht[$i]['datum_ende'];
+            
+            if($date == "" || date("Y-m-d H:i:s") < $date)
+            {
+                unset($leiht[$i]);
+            }
+        }
+
+        $leiht = array_values($leiht);
+
+        return $leiht;
+    }
+
 }

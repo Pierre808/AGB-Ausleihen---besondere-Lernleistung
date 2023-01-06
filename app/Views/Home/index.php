@@ -5,6 +5,7 @@
 
 <?= $this->section("headerLinks")?> 
 <link rel="stylesheet" href="<?= base_url('public/css/containers.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/warning.css') ?>">
 <?= $this->endSection() ?>
 
 
@@ -13,12 +14,27 @@
         <h1>Überfällige Leihgaben:</h1>
 
         <div class="containers-list">
-            <div class="container">
-                <p><span  class="big">Name Schüler: </span> Max Mustermann</p>
-                <p><span  class="big">Gegenstand: </span> Kamera</p>
-                <p><span  class="big">Überfällig seit: </span> 12.11.2022</p>
-            </div>
-            
+            <?php 
+            if(count(esc($leihgaben)) != 0)
+            {
+                for($i = 0; $i < count(esc($leihgaben)); $i++)
+                { ?>
+                    <div class="container">
+                        <p><span  class="big">Name Schüler: </span><?= esc($leihgaben[$i]['schueler_name']) ?></p>
+                        <p><span  class="big">Gegenstand: </span><?= esc($leihgaben[$i]['gegenstand_bezeichnung']) ?></p>
+                        <p><span  class="big">Überfällig seit: </span><?= esc($leihgaben[$i]['formated_datum_ende']) ?></p>
+                    </div>
+                <?php }
+            }
+            else
+            { ?>
+                <div class="warning warning-green">
+                    <p>
+                        Keine überfälligen Leihgaben.
+                    </p>
+                </div>
+            <?php }
+            ?>
         </div>
     </div>
 <?= $this->endSection() ?>
