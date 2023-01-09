@@ -34,7 +34,7 @@ class Gegenstand extends BaseController
 
             if($gegenstand == null)
             {
-                $data['redirect'] = base_url("");
+                $data['redirect'] = base_url("show-gegenstand/" . $gegenstandId);
             }
             
             $data['gegenstand'] = $gegenstand;
