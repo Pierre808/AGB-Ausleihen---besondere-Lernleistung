@@ -1,0 +1,81 @@
+CRITICAL - 2023-01-09 16:37:13 --> Call to undefined function form_open()
+in APPPATH\Views\Gegenstand\gegenstandRegistrieren.php on line 17.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandRegistrieren', [], true)
+ 4 APPPATH\Controllers\Gegenstand.php(31): view('Gegenstand/gegenstandRegistrieren', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-09 16:43:05 --> Undefined variable $gegenstandId
+in APPPATH\Views\Gegenstand\gegenstandRegistrieren.php on line 54.
+ 1 APPPATH\Views\Gegenstand\gegenstandRegistrieren.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gegenstandId', 'APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php', 54)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandRegistrieren', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(30): view('Gegenstand/gegenstandRegistrieren', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-09 16:48:06 --> Undefined variable $gegenstandId
+in APPPATH\Controllers\Gegenstand.php on line 29.
+ 1 APPPATH\Controllers\Gegenstand.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gegenstandId', 'APPPATH\\Controllers\\Gegenstand.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-09 16:51:44 --> Undefined variable $schuelerId
+in APPPATH\Views\Gegenstand\gegenstandRegistrieren.php on line 142.
+ 1 APPPATH\Views\Gegenstand\gegenstandRegistrieren.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php', 142)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandRegistrieren', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(37): view('Gegenstand/gegenstandRegistrieren', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-09 16:55:07 --> The route for "yes" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('yes')
+ 2 SYSTEMPATH\Common.php(860): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Gegenstand.php(37): redirect('yes')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren('adf')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-09 16:55:32 --> Undefined variable $schuelerId
+in APPPATH\Views\Gegenstand\gegenstandRegistrieren.php on line 104.
+ 1 APPPATH\Views\Gegenstand\gegenstandRegistrieren.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandRegistrieren', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(43): view('Gegenstand/gegenstandRegistrieren', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren('def')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-09 16:56:46 --> Undefined variable $schuelerId
+in APPPATH\Views\Gegenstand\gegenstandRegistrieren.php on line 104.
+ 1 APPPATH\Views\Gegenstand\gegenstandRegistrieren.php(104): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php', 104)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandRegistrieren', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(43): view('Gegenstand/gegenstandRegistrieren', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren('def')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-09 16:59:20 --> Undefined variable $redirect
+in APPPATH\Views\Gegenstand\gegenstandRegistrieren.php on line 76.
+ 1 APPPATH\Views\Gegenstand\gegenstandRegistrieren.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $redirect', 'APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandRegistrieren.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandRegistrieren', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(38): view('Gegenstand/gegenstandRegistrieren', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren('adsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
