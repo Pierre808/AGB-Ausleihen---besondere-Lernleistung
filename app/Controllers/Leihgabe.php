@@ -131,6 +131,10 @@ class Leihgabe extends BaseController
                 }
                 
             }
+            else
+            {
+                session()->setFlashdata('redirect', 'add-gegenstand-to-leihgabe/' . $schuelerId . "/" . $gegenstandId);
+            }
         } 
 
         //search if schueler exists in db 

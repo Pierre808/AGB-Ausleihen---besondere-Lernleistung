@@ -38,9 +38,19 @@ class Gegenstand extends BaseController
             {
                 GegenstandHelper::add($gegenstandId, '/');
                 $data['redirect'] = base_url("show-gegenstand/" . $gegenstandId);
+
+                if(session()->getFlashdata('redirect') != null)
+                {
+                    $data['redirect'] = base_url(session()->getFlashdata('redirect'));
+                }
             }
             
             $data['gegenstand'] = $gegenstand;
+        }
+
+        if(session()->getFlashdata('redirect') != null)
+        {
+            session()->setFlashdata('redirect', session()->getFlashdata('redirect'));
         }
 
         return view('Gegenstand/gegenstandRegistrieren', $data);

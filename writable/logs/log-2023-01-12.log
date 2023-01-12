@@ -197,3 +197,24 @@ in APPPATH\Controllers\Gegenstand.php on line 72.
  5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:32:00 --> Undefined variable $session
+in APPPATH\Controllers\Leihgabe.php on line 136.
+ 1 APPPATH\Controllers\Leihgabe.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Leihgabe.php', 136)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'asdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:32:24 --> Undefined variable $session
+in APPPATH\Controllers\Leihgabe.php on line 136.
+ 1 APPPATH\Controllers\Leihgabe.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Leihgabe.php', 136)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'asdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 21:32:30 --> Undefined variable $session
+in APPPATH\Controllers\Leihgabe.php on line 136.
+ 1 APPPATH\Controllers\Leihgabe.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Controllers\\Leihgabe.php', 136)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AG5836', 'asdf', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
