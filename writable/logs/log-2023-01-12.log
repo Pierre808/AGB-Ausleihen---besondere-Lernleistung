@@ -1,0 +1,199 @@
+CRITICAL - 2023-01-12 16:37:47 --> Non-static method App\Libraries\LeihtHelper::getActiveByGegenstandId() cannot be called statically
+in APPPATH\Controllers\Gegenstand.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('asdf')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 17:01:08 --> Undefined variable $schuelerId
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 40.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(59): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 17:01:13 --> Undefined variable $schuelerId
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 40.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(59): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 17:04:30 --> form_input(): Argument #2 ($value) must be of type string, array given, called in D:\xampp\htdocs\AGB\app\Views\Gegenstand\gegenstandAnzeigen.php on line 41
+in SYSTEMPATH\Helpers\form_helper.php on line 143.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(41): form_input('bezeichnung', [...], 'text')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(59): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 18:02:50 --> Undefined array key "schueler_id"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 100.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "schueler_id"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 100)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(70): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:33:39 --> Undefined array key "datum_anfang"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 101.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(101): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datum_anfang"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 101)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(70): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:41:23 --> Undefined array key "datum_end"
+in APPPATH\Controllers\Gegenstand.php on line 67.
+ 1 APPPATH\Controllers\Gegenstand.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datum_end"', 'APPPATH\\Controllers\\Gegenstand.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:41:32 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Gegenstand.php', 67)
+ 2 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Gegenstand.php', 67)
+ 3 APPPATH\Controllers\Gegenstand.php(67): date_create_from_format('Y-m-d H:i:s', null)
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:43:16 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(84): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:43:39 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(85): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:43:52 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(85): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:44:09 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(85): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:44:09 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(85): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:46:08 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(85): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:46:38 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Leihgabe.php on line 61.
+ 1 APPPATH\Controllers\Leihgabe.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Leihgabe.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->leihgabeAnzeigen('a')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:47:07 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Gegenstand.php', 71)
+ 2 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Gegenstand.php', 71)
+ 3 APPPATH\Controllers\Gegenstand.php(71): date_create_from_format('Y-m-d H:i:s', null)
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:47:46 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Gegenstand.php', 71)
+ 2 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Gegenstand.php', 71)
+ 3 APPPATH\Controllers\Gegenstand.php(71): date_create_from_format('Y-m-d H:i:s', null)
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:48:31 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(89): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:48:32 --> Undefined array key "formated_datum_ende"
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 102.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "formated_datum_ende"', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 102)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(89): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('ABC-abc-1234')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 20:49:08 --> syntax error, unexpected identifier "e", expecting ")"
+in APPPATH\Controllers\Gegenstand.php on line 72.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Gegenstand.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Gegenstand')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Gegenstand')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Gegenstand', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

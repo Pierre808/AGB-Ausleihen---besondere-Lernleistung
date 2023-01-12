@@ -68,7 +68,7 @@
                 ?>
                 <?= form_input('mail', set_value('mail'), ['placeholder'=>'Mail eingeben'], 'text') ?>
                 
-                <input type="submit" value="Hinzufügen"/>
+                <input type="submit" value="Schüler registrieren"/>
             <?= form_close() ?>
             </div>
         </div>

@@ -4,6 +4,7 @@
     width: 100%;
     align-items: center;
     gap: 3vh;
+    margin-bottom: 4vh
 }
 
 .container{
@@ -23,10 +24,11 @@
 
 .container .pList{
     margin-bottom: 1em;
+    margin-left: 2%;
 }
 
 .container .pList p{
-    margin: 2%;
+    margin: 2% 0;
 }
 
 .box-container{
@@ -46,4 +48,18 @@
 
 .box-container-top{
     margin-top: 3vh;
+}
+
+
+.container-row{
+    width: 100%;
+    padding: 1% 2%;
+}
+
+.row-dark{
+    background-color: #D6D6D6;
+}
+
+.row-light{
+    background-color: #ffffff;
 }

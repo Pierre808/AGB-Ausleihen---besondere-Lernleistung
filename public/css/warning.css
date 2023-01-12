@@ -45,3 +45,8 @@
     background-color: rgb(104, 199, 95);
     border: 3px groove rgb(49, 163, 34);
 }
+
+#warning100{
+    width: 100%;
+    margin-left: 0;
+}

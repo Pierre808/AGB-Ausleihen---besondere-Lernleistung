@@ -92,7 +92,7 @@
                     await new Promise(resolve => setTimeout(resolve, 500));
 
                     alreadyDiv.innerHTML = 
-                    '<p> Der Gegenstand ist bereits registriert. <br> <a href="<?= base_url("add-gegenstand") ?>"> erneut scannen </a> </p> <img src="<?= base_url('public/imgs/warning_white.png') ?>"/>';
+                    '<p> Der Gegenstand ist bereits registriert. <br> <a href="<?= base_url("add-gegenstand") ?>"> erneut scannen </a> oder <a href="<?= base_url("show-gegenstand/" . esc($gegenstandId)) ?>"> Gegenstand anzeigen </a> </p> <img src="<?= base_url('public/imgs/warning_white.png') ?>"/>';
                    
                         
                     alreadyDiv.classList.add("warning");

@@ -36,14 +36,34 @@ class LeihtHelper
         return $leihtDbId;
     }
 
+    //gets active Leihgaben by schuelerId and gegenstandId
     public static function getActiveByIds($schueler_id, $gegenstand_id)
     {
         $leihtModel = new LeihtModel();
-        $leiht = $leihtModel->where("schueler_id", $schueler_id)->where('gegenstand_id', $gegenstand_id)->First();
+        $leiht = $leihtModel->where("schueler_id", $schueler_id)->where('gegenstand_id', $gegenstand_id)->where('aktiv', 1)->First();
 
         return $leiht;
     }
 
+    //gets active by gegenstandId
+    public static function getActiveByGegenstandId($gegenstand_id)
+    {
+        $leihtModel = new LeihtModel();
+        $leiht = $leihtModel->where("gegenstand_id", $gegenstand_id)->where("aktiv", 1)->First();
+
+        return $leiht;
+    }
+
+    //gets all by gegenstandId
+    public static function getByGegenstandId($gegenstand_id)
+    {
+        $leihtModel = new LeihtModel();
+        $leiht = $leihtModel->where("gegenstand_id", $gegenstand_id)->Find();
+
+        return $leiht;
+    }
+
+    //gets by leihgaben_id
     public static function getById($id)
     {
         $leihtModel = new LeihtModel();

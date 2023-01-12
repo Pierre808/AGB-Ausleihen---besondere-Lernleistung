@@ -35,6 +35,11 @@ body{
 .left-margin{
   margin-left: 2vw;
 }
+@media screen and (min-width: 1200px) {
+  .left-margin{
+    margin-left: 0.5vw;
+  }
+}
 
 .block{
   display: block;
