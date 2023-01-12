@@ -172,7 +172,7 @@
 
                 await new Promise(resolve => setTimeout(resolve, 500));
                 
-                if(currentCode == code) {
+                if(currentCode == code && currentCode != " ") {
                     console.log("finished code: " + code);
 
                     

@@ -6,21 +6,20 @@ use App\Models\GegenstandModel;
 
 class GegenstandHelper
 {
-    /*public static function add($id, $name, $mail = null)
+    public static function add($id, $bezeichnung)
     {
         $data = [
-            'schueler_id' => $id,
-            'name' => $name,
-            'mail'    => $mail,
+            'gegenstand_id' => $id,
+            'bezeichnung' => $bezeichnung
         ];
 
-        $schuelerModel = new SchuelerModel();
+        $gegenstandModel = new GegenstandModel();
 
         // Inserts data and returns inserted row's primary key
-        $schuelerDbId = $schuelerModel->insert($data);
+        $gegenstandDbId = $gegenstandModel->insert($data);
 
-        return $schuelerDbId;
-    }*/
+        return $gegenstandDbId;
+    }
 
     public static function getById($id)
     {
