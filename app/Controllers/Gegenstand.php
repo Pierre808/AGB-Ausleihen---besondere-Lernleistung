@@ -30,6 +30,12 @@ class Gegenstand extends BaseController
         
         $data['gegenstandId'] = $gegenstandId;
 
+        $data['wrongprefix'] = false;
+        if(!str_starts_with($gegenstandId, getenv('GEGENSTAND_PREFIX')))
+        {
+            $data['wrongprefix'] = true;
+        }
+
         if($gegenstandId != false)
         {
             $gegenstand = GegenstandHelper::getById($gegenstandId);
