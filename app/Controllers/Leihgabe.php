@@ -138,7 +138,7 @@ class Leihgabe extends BaseController
             }
             else
             {
-                session()->setFlashdata('redirect', 'add-gegenstand-to-leihgabe/' . $schuelerId . "/" . $gegenstandId);
+                session()->setFlashdata('gegenstand_redirect', 'add-gegenstand-to-leihgabe/' . $schuelerId . "/" . $gegenstandId);
             }
         } 
 

@@ -144,7 +144,7 @@
                     { 
                     ?>
                         notFoundDiv.innerHTML = 
-                        '<p> Der Gegenstand ist nicht im System registriert <br> <a href="<?= base_url('add-gegenstand') ?>">Gegenstand registrieren</a> oder <br> <a href="<?= base_url('add-gegenstand-to-leihgabe/' . esc($schuelerId)) ?>">erneut scannen</a> </p> <img src="<?= base_url('public/imgs/warning_white.png') ?>"/>';
+                        '<p> Der Gegenstand ist nicht im System registriert <br> <a href="<?= base_url('add-gegenstand/' . esc($gegenstandId)) ?>">Gegenstand registrieren</a> oder <br> <a href="<?= base_url('add-gegenstand-to-leihgabe/' . esc($schuelerId)) ?>">erneut scannen</a> </p> <img src="<?= base_url('public/imgs/warning_white.png') ?>"/>';
                     <?php 
                     } 
                     ?>

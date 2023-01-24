@@ -1,0 +1,6 @@
+CRITICAL - 2023-01-24 20:24:03 --> Call to undefined method CodeIgniter\Session\Session::removeFlashdata()
+in APPPATH\Controllers\Gegenstand.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandRegistrieren('GEasdd', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
