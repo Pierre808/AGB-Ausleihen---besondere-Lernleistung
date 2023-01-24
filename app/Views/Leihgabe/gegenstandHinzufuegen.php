@@ -80,7 +80,7 @@
         if(esc($gegenstandId))
         {
             echo('console.log("not false")');
-            if(esc($gegenstand) != null && esc($alreadyInDb) == false)
+            if(esc($gegenstand) != null && esc($alreadyInDb) == false && esc($wrongprefix) == false)
             {
                 ?>
 
@@ -132,6 +132,13 @@
                         notFoundDiv.innerHTML = 
                         '<p> Der Schüler leiht diesen Gegenstand bereits aus <br> <a href="<?= base_url('add-gegenstand-to-leihgabe/' . esc($schuelerId)) ?>">erneut scannen</a> </p> <img src="<?= base_url('public/imgs/warning_white.png') ?>"/>';
                     <?php 
+                    }
+                    elseif(esc($wrongprefix))
+                    {
+                    ?>
+                        notFoundDiv.innerHTML = 
+                        '<p> Der Barcode entspricht nicht den Bedingungen eines Gegenstandes <br> <a href="<?= base_url('add-gegenstand-to-leihgabe/' . esc($schuelerId)) ?>">erneut scannen</a> </p> <img src="<?= base_url('public/imgs/warning_white.png') ?>"/>';
+                    <?php
                     }
                     else
                     { 

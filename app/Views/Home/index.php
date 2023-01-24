@@ -6,13 +6,20 @@
 <?= $this->section("headerLinks")?> 
 <link rel="stylesheet" href="<?= base_url('public/css/containers.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/warning.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/buttons.css') ?>">
 <?= $this->endSection() ?>
 
 
 <?= $this->section("content") ?>
     <div id="main">
-        <h1>Überfällige Leihgaben:</h1>
+        <h1>Schnellzugriff:</h1>
+        <div class="buttonlist">
+            <button onclick="location.href='<?= base_url('add-leihgabe') ?>'">Gegenstand verleihen</button>
+            <button onclick="location.href='<?= base_url('') ?>'">Gegenstand zurückgeben</button>
+            <button onclick="location.href='<?= base_url('') ?>'">Schülerdaten anzeigen</button>
+        </div>
 
+        <h1>Überfällige Leihgaben:</h1>
         <div class="containers-list">
             <?php 
             if(count(esc($leihgaben)) != 0)

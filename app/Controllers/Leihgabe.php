@@ -108,6 +108,12 @@ class Leihgabe extends BaseController
         {
             $gegenstand = GegenstandHelper::getById($gegenstandId);
             $data['gegenstand'] = $gegenstand;
+
+            $data['wrongprefix'] = false;
+            if(!str_starts_with($gegenstandId, getenv('GEGENSTAND_PREFIX')))
+            {
+                $data['wrongprefix'] = true;
+            }
             
             $data['alreadyInDb'] = false;
 
@@ -125,7 +131,6 @@ class Leihgabe extends BaseController
                 else
                 {
                     $rowId = LeihtHelper::add($schuelerId, $gegenstandId);
-
 
                     $data['redirect'] = base_url('show-leihgabe/' . $rowId);
                 }

@@ -59,9 +59,16 @@
             var currentCode = code;
 
             await new Promise(resolve => setTimeout(resolve, 500));
-            
+            console.log('<?=getenv('SCHUELER_PREFIX')?>');
             if(currentCode == code) {
                 console.log("finished code: " + code);
+
+                if(!currentCode.startsWith('<?=getenv('SCHUELER_PREFIX')?>'))
+                {
+                    console.log('prefix not accepted, reseted read code');
+                    code = "";
+                    return;
+                }
 
                 var success = document.getElementById("success-animation");
                 var loading = document.getElementById("loading-box");
