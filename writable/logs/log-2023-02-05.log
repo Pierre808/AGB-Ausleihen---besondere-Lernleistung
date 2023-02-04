@@ -1,0 +1,131 @@
+CRITICAL - 2023-02-05 14:22:31 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Leihgabe.php on line 143.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:22:54 --> Class "App\Controllers\DateInterval" not found
+in APPPATH\Controllers\Leihgabe.php on line 143.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:23:53 --> date_add(): Argument #1 ($object) must be of type DateTime, DateInterval given
+in APPPATH\Controllers\Leihgabe.php on line 146.
+ 1 APPPATH\Controllers\Leihgabe.php(146): date_add(Object(DateInterval), false)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:25:01 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Leihgabe.php on line 146.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:25:15 --> date_add(): Argument #2 ($interval) must be of type DateInterval, bool given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add(Object(DateTime), false)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:26:02 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:26:03 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:26:30 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:27:47 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:27:49 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:28:34 --> date_add(): Argument #1 ($object) must be of type DateTime, string given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add('2023-02-05', Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:29:29 --> Call to a member function getTimestamp() on bool
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:29:44 --> Call to a member function getTimestamp() on bool
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:29:54 --> Call to a member function getTimestamp() on bool
+in APPPATH\Controllers\Leihgabe.php on line 146.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:30:33 --> syntax error, unexpected identifier "date_create_from_format"
+in APPPATH\Controllers\Leihgabe.php on line 146.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:30:41 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 147.
+ 1 APPPATH\Controllers\Leihgabe.php(147): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:31:58 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 148.
+ 1 APPPATH\Controllers\Leihgabe.php(148): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:32:09 --> date_add(): Argument #1 ($object) must be of type DateTime, bool given
+in APPPATH\Controllers\Leihgabe.php on line 148.
+ 1 APPPATH\Controllers\Leihgabe.php(148): date_add(false, Object(DateInterval))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=abcabc', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-05 14:35:26 --> syntax error, unexpected identifier "var_dump"
+in APPPATH\Controllers\Leihgabe.php on line 150.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

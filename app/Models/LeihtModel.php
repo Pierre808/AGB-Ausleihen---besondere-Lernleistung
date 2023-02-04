@@ -14,7 +14,7 @@ class LeihtModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id', 'schueler_id', 'gegenstand_id', 'datum_start', 'datum_ende', 'aktiv'];
+    protected $allowedFields = ['id', 'schueler_id', 'gegenstand_id', 'datum_start', 'datum_ende', 'weitere', 'aktiv'];
 
     protected $useTimestamps = true;
     protected $createdField  = '';

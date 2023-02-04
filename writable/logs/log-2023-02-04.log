@@ -1,0 +1,120 @@
+CRITICAL - 2023-02-04 11:31:28 --> Class "Time" not found
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 59.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 4 APPPATH\Controllers\Leihgabe.php(171): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'ROOTPATH\\public')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 11:31:57 --> date() expects at least 1 argument, 0 given
+in APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php on line 59.
+ 1 APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php(59): date()
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Leihgabe\\gegenstandHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Leihgabe.php(171): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'ROOTPATH\\public')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 12:51:33 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Leihgabe.php on line 142.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=af', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 12:52:28 --> Object of class DateTime could not be converted to string
+in APPPATH\Controllers\Leihgabe.php on line 142.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=af', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 12:56:44 --> Call to a member function modify() on bool
+in APPPATH\Controllers\Leihgabe.php on line 143.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=af', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 12:58:33 --> Call to a member function modify() on int
+in APPPATH\Controllers\Leihgabe.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=af', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:09:52 --> strtotime(): Argument #2 ($baseTimestamp) must be of type ?int, string given
+in APPPATH\Controllers\Leihgabe.php on line 143.
+ 1 APPPATH\Controllers\Leihgabe.php(143): strtotime('ROOTPATH\\public', '+ 23 hours')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=af', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:10:09 --> strtotime(): Argument #2 ($baseTimestamp) must be of type ?int, string given
+in APPPATH\Controllers\Leihgabe.php on line 143.
+ 1 APPPATH\Controllers\Leihgabe.php(143): strtotime('ROOTPATH\\public', '+ 23 hours')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGadsf', 'GEabc', 'weitere=af', 'datum-ende=2023-02-05', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:13:44 --> syntax error, unexpected variable "$rowId"
+in APPPATH\Controllers\Leihgabe.php on line 144.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:13:47 --> syntax error, unexpected variable "$rowId"
+in APPPATH\Controllers\Leihgabe.php on line 144.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:13:56 --> syntax error, unexpected variable "$rowId"
+in APPPATH\Controllers\Leihgabe.php on line 144.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:13:57 --> syntax error, unexpected variable "$rowId"
+in APPPATH\Controllers\Leihgabe.php on line 144.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:14:05 --> syntax error, unexpected variable "$rowId"
+in APPPATH\Controllers\Leihgabe.php on line 144.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:14:17 --> syntax error, unexpected variable "$rowId"
+in APPPATH\Controllers\Leihgabe.php on line 144.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-04 14:40:37 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Leihgabe.php on line 65.
+ 1 APPPATH\Controllers\Leihgabe.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Leihgabe.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->leihgabeAnzeigen('14')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

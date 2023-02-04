@@ -50,6 +50,18 @@
                 ];
                 echo form_input($data);
             ?>
+
+            <label for="weitere"><b>Weitere Schüler</b></label>
+            <?= form_input('weitere', set_value('weitere'), ['placeholder'=>'Weitere Schüler, die an der Leihgabe beteiligt sind', 'id' => 'weitere-input'], 'text') ?>
+            
+            <label for="datum-ende"><b>Ende der Leihgabe</b></label>
+            <br>
+            <?= form_input('datum-ende-aktiv', set_value('datum-ende-aktiv'), ['placeholder'=>'', 'id' => 'datum-checkbox'], 'checkbox') ?>
+            <input type="date" id="datum-input" name="datum-ende"
+            placeholder="dd-mm-yyyy"
+            value="<?= date('Y-m-d', strtotime(date('Y-m-d') . " + 1 day")) ?>"
+            min="<?= date('Y-m-d') ?>"
+            disabled="true">
         <?= form_close() ?>
         
         <div id="gegenstandNotFoundDiv">
@@ -75,6 +87,23 @@
     </div>
 
     <script>
+        const someCheckbox = document.getElementById('datum-checkbox');
+
+        someCheckbox.addEventListener('change', e => {
+        if(e.target.checked === true) {
+            document.getElementById("datum-input").disabled = false;
+        }
+        if(e.target.checked === false) {
+            document.getElementById("datum-input").disabled = true;
+        }
+        });
+
+        const dateInput = document.getElementById('datum-input');
+
+        dateInput.addEventListener('change', e => {
+            console.log('blur');
+            e.target.blur();
+        });
 
         <?php
         if(esc($gegenstandId))
@@ -163,6 +192,12 @@
             let code = '';
             document.addEventListener("keydown", e => {
                 if(e.key != "Shift" && e.key != "Enter" && e.key != "Control") {
+                    
+                    if(document.getElementById("weitere-input") === document.activeElement || document.getElementById("datum-input") === document.activeElement)
+                    {
+                        console.log('not reading code');
+                        return;
+                    }
                     code = code + e.key;
                     console.log("code: " + code);
 
@@ -182,9 +217,15 @@
                 if(currentCode == code && currentCode != " ") {
                     console.log("finished code: " + code);
 
+                    var location = "<?= base_url("add-gegenstand-to-leihgabe/" . esc($schuelerId)) ?>/" + code + '/weitere=' + document.getElementById("weitere-input").value;
+
+                    if(document.getElementById('datum-checkbox').checked == true)
+                    {
+                        location += '/datum-ende=' + document.getElementById("datum-input").value;
+                    }
                     
 
-                    window.location.href = "<?= base_url("add-gegenstand-to-leihgabe/" . esc($schuelerId)) ?>/" + code;
+                    window.location.href = location;
                 }
             }
 

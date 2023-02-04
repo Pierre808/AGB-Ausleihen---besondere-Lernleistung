@@ -22,3 +22,14 @@ in APPPATH\Views\Gegenstand\gegenstandRegistrieren.php on line 49.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-24 20:43:04 --> Trying to access array offset on value of type null
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 19.
+ 1 APPPATH\Views\Gegenstand\gegenstandAnzeigen.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(110): view('Gegenstand/gegenstandAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('GEhjkl')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

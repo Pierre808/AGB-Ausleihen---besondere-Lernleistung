@@ -9,6 +9,10 @@ use App\Libraries\SchuelerHelper;
 use App\Libraries\GegenstandHelper;
 use App\Libraries\LeihtHelper;
 
+
+use DateTime;
+use DateInterval;
+
 class Leihgabe extends BaseController
 {
     public function __construct()
@@ -97,7 +101,7 @@ class Leihgabe extends BaseController
     }
 
     //nachdem der schuelerausweis eingescannt wurde, wird diese seite aufgerufen (siehe leihgabe erstellen)
-    public function gegenstandHinzufuegen($schuelerId = false, $gegenstandId = false)
+    public function gegenstandHinzufuegen($schuelerId = false, $gegenstandId = false, $weitere = false, $datumEnde = false)
     {
         if($schuelerId == false)
         {
@@ -130,7 +134,21 @@ class Leihgabe extends BaseController
                 }
                 else
                 {
-                    $rowId = LeihtHelper::add($schuelerId, $gegenstandId);
+                    $weitereCropped = trim($weitere, "weitere=");
+
+                    if($datumEnde != false)
+                    {
+                        $datumEndeCropped = trim($datumEnde, "datum-ende=");
+                    }
+
+                    if($weitereCropped != "" && $datumEnde != false)
+                    {
+                        //$datumEndeFinished = date_create_from_format("Y-m-d H:i:s", $datumEndeCropped);
+                        //var_dump($datumEndeCropped);
+                        //date_add($datumEndeFinished, new DateInterval("PT23H"));
+                        $d = date("Y-m-d H:i:s", strtotime('+23 hours +59 minutes', strtotime($datumEndeCropped)));
+                        $rowId = LeihtHelper::add($schuelerId, $gegenstandId,date("Y-m-d H:i:s"), $d, $weitereCropped);
+                    }
 
                     $data['redirect'] = base_url('show-leihgabe/' . $rowId);
                 }
