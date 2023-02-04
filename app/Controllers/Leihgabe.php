@@ -134,21 +134,28 @@ class Leihgabe extends BaseController
                 }
                 else
                 {
-                    $weitereCropped = trim($weitere, "weitere=");
+                    $weitereCropped = substr($weitere, 8);
+                    if($weitereCropped == "")
+                    {
+                        $weitereCropped = false;
+                    }
 
+                    
+                    $d = false;
                     if($datumEnde != false)
                     {
                         $datumEndeCropped = trim($datumEnde, "datum-ende=");
+
+                        if($datumEndeCropped != "")
+                        {
+                            $d = date("Y-m-d H:i:s", strtotime('+23 hours +59 minutes', strtotime($datumEndeCropped)));
+                        }
                     }
 
-                    if($weitereCropped != "" && $datumEnde != false)
-                    {
-                        //$datumEndeFinished = date_create_from_format("Y-m-d H:i:s", $datumEndeCropped);
-                        //var_dump($datumEndeCropped);
-                        //date_add($datumEndeFinished, new DateInterval("PT23H"));
-                        $d = date("Y-m-d H:i:s", strtotime('+23 hours +59 minutes', strtotime($datumEndeCropped)));
-                        $rowId = LeihtHelper::add($schuelerId, $gegenstandId,date("Y-m-d H:i:s"), $d, $weitereCropped);
-                    }
+                    
+                    $rowId = LeihtHelper::add($schuelerId, $gegenstandId,date("Y-m-d H:i:s"), $d, $weitereCropped);
+                    
+                    
 
                     $data['redirect'] = base_url('show-leihgabe/' . $rowId);
                 }

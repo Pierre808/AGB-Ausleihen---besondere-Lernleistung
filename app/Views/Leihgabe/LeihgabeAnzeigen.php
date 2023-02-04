@@ -21,6 +21,7 @@
                     <p class="big">Name: <span class="standart left-margin"><?= esc($schueler['name']) ?></span></p>
                     <p class="big">Mail: <span class="standart left-margin"><?= esc($schueler['mail']) ?></span></p>
                     <p class="big">Schüler-Id: <span class="standart left-margin"><?= esc($schueler['schueler_id']) ?></span></p>
+                    <p class="big">Weitere: <span class="standart left-margin"><?= esc($leihgabe['weitere']) ?></span></p>
                 </div>
             </div>
             </a>
