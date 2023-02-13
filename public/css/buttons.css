@@ -7,7 +7,7 @@
 }
 
 .buttonlist button{
-    height: 5vh;
+    height: 7vh;
     width: auto;
     background-color: var(--main); 
     color: white;

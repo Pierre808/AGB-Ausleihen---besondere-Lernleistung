@@ -50,6 +50,13 @@
                 </div>
             </a>
 
+            <a href="<?= base_url("all-schueler") ?>">
+                <div class="menu-link <?php if(esc($menuName) == "schueler"){echo("active");} ?>">
+                    <img src="<?= base_url("public/imgs/home.png") ?>"/>
+                    <p>Registrierte Schüler</p>
+                </div>
+            <a>
+
             <a href="<?= base_url("all-gegenstande") ?>">
                 <div class="menu-link <?php if(esc($menuName) == "gegenstande"){echo("active");} ?>">
                     <img src="<?= base_url("public/imgs/home.png") ?>"/>

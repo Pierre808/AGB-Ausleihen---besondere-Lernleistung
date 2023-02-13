@@ -47,6 +47,7 @@ $routes->get('/add-gegenstand', 'Gegenstand::gegenstandRegistrieren');
 $routes->get('/add-gegenstand/(:any)', 'Gegenstand::gegenstandRegistrieren/$1/$2');
 $routes->match(['get', 'post'], '/show-gegenstand/(:segment)', 'Gegenstand::gegenstandAnzeigen/$1');
 
+$routes->get('/all-schueler', 'Schueler::registrierteSchueler');
 $routes->match(['get', 'post'], '/add-schueler/(:segment)', 'Schueler::schuelerHinzufuegen/$1');
 $routes->get('/show-schueler/(:segment)', 'Schueler::schuelerAnzeigen/$1');
 

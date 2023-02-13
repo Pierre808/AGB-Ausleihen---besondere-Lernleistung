@@ -1,0 +1,77 @@
+CRITICAL - 2023-02-13 18:22:21 --> Invalid file: Schueler/registrierteSchueler.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Schueler/registrierteSchueler.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/registrierteSchueler', [], true)
+ 3 APPPATH\Controllers\Schueler.php(23): view('Schueler/registrierteSchueler', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-13 18:25:13 --> Undefined variable $active
+in APPPATH\Views\Schueler\registrierteSchueler.php on line 17.
+ 1 APPPATH\Views\Schueler\registrierteSchueler.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\Schueler\\registrierteSchueler.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\registrierteSchueler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/registrierteSchueler', [], true)
+ 5 APPPATH\Controllers\Schueler.php(23): view('Schueler/registrierteSchueler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-13 19:56:24 --> Call to undefined method App\Controllers\Schueler::getAll()
+in APPPATH\Controllers\Schueler.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-13 19:57:04 --> syntax error, unexpected token "(", expecting variable
+in APPPATH\Libraries\SchuelerHelper.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Libraries\\SchuelerHelper.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\SchuelerHelper')
+ 3 APPPATH\Controllers\Schueler.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\SchuelerHelper')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-13 19:57:25 --> Undefined variable $active
+in APPPATH\Views\Schueler\registrierteSchueler.php on line 17.
+ 1 APPPATH\Views\Schueler\registrierteSchueler.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\Schueler\\registrierteSchueler.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\registrierteSchueler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/registrierteSchueler', [], true)
+ 5 APPPATH\Controllers\Schueler.php(24): view('Schueler/registrierteSchueler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-13 19:58:14 --> Undefined array key "id"
+in APPPATH\Views\Schueler\registrierteSchueler.php on line 22.
+ 1 APPPATH\Views\Schueler\registrierteSchueler.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\Schueler\\registrierteSchueler.php', 22)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\registrierteSchueler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/registrierteSchueler', [], true)
+ 5 APPPATH\Controllers\Schueler.php(26): view('Schueler/registrierteSchueler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-13 19:58:36 --> Undefined array key "schueler_name"
+in APPPATH\Views\Schueler\registrierteSchueler.php on line 25.
+ 1 APPPATH\Views\Schueler\registrierteSchueler.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "schueler_name"', 'APPPATH\\Views\\Schueler\\registrierteSchueler.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\registrierteSchueler.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/registrierteSchueler', [], true)
+ 5 APPPATH\Controllers\Schueler.php(26): view('Schueler/registrierteSchueler', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-13 20:02:10 --> syntax error, unexpected token "=="
+in APPPATH\Views\Schueler\registrierteSchueler.php on line 27.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/registrierteSchueler', [], true)
+ 3 APPPATH\Controllers\Schueler.php(26): view('Schueler/registrierteSchueler', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->registrierteSchueler()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -6,6 +6,14 @@ use App\Models\SchuelerModel;
 
 class SchuelerHelper
 {
+    public static function getAll()
+    {
+        $schuelerModel = new SchuelerModel();
+        $schueler = $schuelerModel->FindAll();
+
+        return $schueler;
+    }
+
     public static function add($id, $name, $mail = null)
     {
         $data = [

@@ -14,6 +14,18 @@ class Schueler extends BaseController
         helper(['url', 'form']);
     }
 
+    public function registrierteSchueler()
+    {
+        $data['page_title'] = "Registrierte Schueler";
+        $data['menuName'] = "schueler";
+        
+        $schueler = SchuelerHelper::getAll();
+
+        $data['schueler'] = $schueler;
+
+        return view('Schueler/registrierteSchueler', $data);
+    }
+
     public function schuelerHinzufuegen($schuelerId = false)
     {
         if($schuelerId == false)
