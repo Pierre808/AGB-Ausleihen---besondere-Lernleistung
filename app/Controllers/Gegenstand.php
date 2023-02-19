@@ -103,7 +103,9 @@ class Gegenstand extends BaseController
 
         if($this->request->getMethod() == "post")
         {
-            //TODO: set bezeichnung?
+            $newBezeichnung = $this->request->getPost('bezeichnung');
+
+            GegenstandHelper::setBezeichnung($gegenstandId, $newBezeichnung);
 
             //prevent warning on reload caused by post request
             return redirect()->to("show-gegenstand/" . $gegenstandId);

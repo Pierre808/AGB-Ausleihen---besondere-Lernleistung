@@ -86,3 +86,21 @@ in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 26.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:29:28 --> syntax error, unexpected token ";", expecting "]"
+in APPPATH\Libraries\GegenstandHelper.php on line 43.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Libraries\\GegenstandHelper.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\GegenstandHelper')
+ 3 APPPATH\Controllers\Gegenstand.php(73): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\GegenstandHelper')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('GEa')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:29:41 --> syntax error, unexpected variable "$gegenstandModel"
+in APPPATH\Libraries\GegenstandHelper.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Libraries\\GegenstandHelper.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\GegenstandHelper')
+ 3 APPPATH\Controllers\Gegenstand.php(73): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\GegenstandHelper')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('GEa')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

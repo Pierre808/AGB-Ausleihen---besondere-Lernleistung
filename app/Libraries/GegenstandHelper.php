@@ -37,4 +37,15 @@ class GegenstandHelper
         return $gegenstand;
     }
 
+    public static function setBezeichnung($id, $bezeichnung)
+    {
+        $dbData = [
+            'bezeichnung' => $bezeichnung,
+        ];
+        
+        $gegenstandModel = new GegenstandModel();
+
+        $gegenstandModel->update($id, $dbData);
+    }
+
 }
