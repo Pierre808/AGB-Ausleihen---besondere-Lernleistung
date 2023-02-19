@@ -24,7 +24,7 @@ class Leihgabe extends BaseController
 
     public function alleLeihgaben()
     {
-        $data['page_title'] = "Alle Leihgabe";
+        $data['page_title'] = "Alle Leihgaben";
         $data['menuName'] = "leihgaben";
         
         $activeLeihgaben = LeihtHelper::getActiveDesc();

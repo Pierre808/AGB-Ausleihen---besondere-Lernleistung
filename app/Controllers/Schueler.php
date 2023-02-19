@@ -26,6 +26,27 @@ class Schueler extends BaseController
         return view('Schueler/registrierteSchueler', $data);
     }
 
+    public function schuelerAnzeigen($schuelerId)
+    {
+        if($schuelerId == false)
+        {
+            return view('errors/html/error_404');
+        }
+        
+        $schueler = SchuelerHelper::getById($schuelerId);
+        if($schueler == null)
+        {
+            return view('errors/html/error_404');
+        }
+
+        $data['page_title'] = "Schueler anzeigen";
+        $data['menuName'] = "schueler";
+
+        $data['schueler'] = $schueler;
+        
+        return view('Schueler/schuelerAnzeigen', $data);
+    }
+
     public function schuelerHinzufuegen($schuelerId = false)
     {
         if($schuelerId == false)

@@ -6,6 +6,14 @@ use App\Models\GegenstandModel;
 
 class GegenstandHelper
 {
+    public static function getAll()
+    {
+        $gegenstandModel = new GegenstandModel();
+        $gegenstand = $gegenstandModel->FindAll();
+
+        return $gegenstand;
+    }
+
     public static function add($id, $bezeichnung)
     {
         $data = [

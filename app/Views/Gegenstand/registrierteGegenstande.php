@@ -12,5 +12,22 @@
     <div id="main">
         <h1>Registrierte Gegenstände:</h1>
 
-        <p>In Arbeit...</p>
+        <div class="container-list">
+            <?php
+                for($i = 0; $i < count(esc($gegenstaende)); $i++)
+                { 
+                    $infos = esc($gegenstaende[$i])
+                    ?>
+
+                    <a class="block width100" href="<?= base_url("show-gegenstand/" . $infos['gegenstand_id']) ?>">
+                    <div class="container">
+                        <div class="pList">
+                            <p class="big">Gegenstand Bezeichnung: <span class="standart left-margin"><?= $infos['bezeichnung'] ?></span></p>
+                            <p class="big">Gegenstand Id: <span class="standart left-margin"><?= $infos['gegenstand_id'] ?></span></p>
+                        </div>
+                    </div>
+                    </a>
+                <?php }
+            ?>
+        </div>
 <?= $this->endSection() ?>

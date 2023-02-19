@@ -18,7 +18,9 @@ class Gegenstand extends BaseController
         $data['page_title'] = "Registrierte Gegenstände";
         $data['menuName'] = "gegenstande";
         
-
+        $gegenstaende = GegenstandHelper::getAll();
+        $data['gegenstaende'] = $gegenstaende;
+        
         return view('Gegenstand/registrierteGegenstande', $data);
     }
 

@@ -1,0 +1,88 @@
+CRITICAL - 2023-02-19 22:02:46 --> Undefined variable $gegenstand
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 19.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gegenstand', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(39): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:03:57 --> Undefined variable $gegenstand
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 19.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gegenstand', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(46): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:03:57 --> Undefined variable $gegenstand
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 19.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gegenstand', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(46): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:04:00 --> Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'APPPATH\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Controllers\Schueler.php(42): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsfa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:04:23 --> Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'APPPATH\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Controllers\Schueler.php(39): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsfa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:04:24 --> Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'APPPATH\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Controllers\Schueler.php(39): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsfa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:08:11 --> Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'APPPATH\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Controllers\Schueler.php(39): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsfa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-19 22:11:12 --> Undefined variable $active
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 26.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(47): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
