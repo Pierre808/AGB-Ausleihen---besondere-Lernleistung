@@ -64,6 +64,25 @@ class LeihtHelper
         return $leiht;
     }
 
+    public static function getBySchuelerId($schueler_id)
+    {
+        $leihtModel = new LeihtModel();
+        $leiht = $leihtModel->where("schueler_id", $schueler_id)->Find();
+
+        return $leiht;
+    }
+
+    public static function setSchuelerId($id, $newSchuelerId)
+    {
+        $dbData = [
+            'schueler_id' => $newSchuelerId,
+        ];
+        
+        $leihtModel = new LeihtModel();
+
+        $leihtModel->update($id, $dbData);
+    }
+
     //gets by leihgaben_id
     public static function getById($id)
     {

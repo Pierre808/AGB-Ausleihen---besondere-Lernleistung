@@ -42,7 +42,7 @@
                     <br>
                     
                     <p class="big">Schueler-Id:</p>
-                    <button>Neuen Schülerausweis zuweisen</button>
+                    <button onclick="location.href='<?= base_url('edit-schueler/' . esc($schueler['schueler_id'])) ?>'">Neuen Schülerausweis zuweisen</button>
                 </div>
             </div>
         </div>

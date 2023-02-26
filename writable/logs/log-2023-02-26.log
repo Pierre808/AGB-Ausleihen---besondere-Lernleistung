@@ -5,3 +5,188 @@ in APPPATH\Controllers\Schueler.php on line 49.
  3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 11:53:15 --> Undefined array key "schuelerId"
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 45.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "schuelerId"', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 45)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(58): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsf')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-26 12:06:38 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`)) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `schuele...', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `schuele...')
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `schuele...')
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `schuele...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xampp\htdocs\AGB\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xampp\htdocs\AGB\app\Libraries\SchuelerHelper.php(36): CodeIgniter\Model->update('AGadsf', Array)
+#8 D:\xampp\htdocs\AGB\app\Controllers\Schueler.php(165): App\Libraries\SchuelerHelper::setId('AGadsf', 'AG')
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AG', '')
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+#11 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\AGB\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-26 12:06:38 --> Cannot delete or update a parent row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `schueler` SET `schueler_id` = \'AG\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `schueler` SET `schueler_id` = \'AG\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `schueler` SET `schueler_id` = \'AG\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `schueler` SET `schueler_id` = :schueler_id:
+WHERE `schueler`.`schueler_id` IN :schueler.schueler_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Libraries\SchuelerHelper.php(36): CodeIgniter\Model->update('AGadsf', [...])
+ 9 APPPATH\Controllers\Schueler.php(165): App\Libraries\SchuelerHelper::setId('AGadsf', 'AG')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AG', 'ROOTPATH\\public')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-26 12:06:47 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`)) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `schuele...', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `schuele...')
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `schuele...')
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `schuele...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xampp\htdocs\AGB\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xampp\htdocs\AGB\app\Libraries\SchuelerHelper.php(36): CodeIgniter\Model->update('AGadsf', Array)
+#8 D:\xampp\htdocs\AGB\app\Controllers\Schueler.php(165): App\Libraries\SchuelerHelper::setId('AGadsf', 'AGa')
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AGa', '')
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+#11 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\AGB\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-26 12:06:47 --> Cannot delete or update a parent row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `schueler` SET `schueler_id` = \'AGa\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `schueler` SET `schueler_id` = \'AGa\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `schueler` SET `schueler_id` = \'AGa\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `schueler` SET `schueler_id` = :schueler_id:
+WHERE `schueler`.`schueler_id` IN :schueler.schueler_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Libraries\SchuelerHelper.php(36): CodeIgniter\Model->update('AGadsf', [...])
+ 9 APPPATH\Controllers\Schueler.php(165): App\Libraries\SchuelerHelper::setId('AGadsf', 'AGa')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AGa', 'ROOTPATH\\public')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 12:06:52 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Schueler.php on line 161.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'a', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-26 12:29:11 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`)) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `schuele...', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `schuele...')
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `schuele...')
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `schuele...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xampp\htdocs\AGB\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xampp\htdocs\AGB\app\Libraries\SchuelerHelper.php(36): CodeIgniter\Model->update('AGadsf', Array)
+#8 D:\xampp\htdocs\AGB\app\Controllers\Schueler.php(165): App\Libraries\SchuelerHelper::setId('AGadsf', 'AGa')
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AGa', '')
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+#11 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\AGB\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-26 12:29:11 --> Cannot delete or update a parent row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `schueler` SET `schueler_id` = \'AGa\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `schueler` SET `schueler_id` = \'AGa\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `schueler` SET `schueler_id` = \'AGa\'
+WHERE `schueler`.`schueler_id` IN (\'AGadsf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `schueler` SET `schueler_id` = :schueler_id:
+WHERE `schueler`.`schueler_id` IN :schueler.schueler_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Libraries\SchuelerHelper.php(36): CodeIgniter\Model->update('AGadsf', [...])
+ 9 APPPATH\Controllers\Schueler.php(165): App\Libraries\SchuelerHelper::setId('AGadsf', 'AGa')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AGa', 'ROOTPATH\\public')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 12:36:52 --> Class "App\Controllers\LeihtHelper" not found
+in APPPATH\Controllers\Schueler.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AGa', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-02-26 12:37:16 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`)) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `leiht` ...', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `leiht` ...')
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `leiht` ...')
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `leiht` ...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 D:\xampp\htdocs\AGB\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(83): CodeIgniter\Model->update('37', Array)
+#8 D:\xampp\htdocs\AGB\app\Controllers\Schueler.php(171): App\Libraries\LeihtHelper::setSchuelerId('37', 'AGa')
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AGa', '')
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+#11 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\AGB\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-02-26 12:37:16 --> Cannot add or update a child row: a foreign key constraint fails (`agb_ausleihen_db`.`leiht`, CONSTRAINT `FK_leiht_schueler` FOREIGN KEY (`schueler_id`) REFERENCES `schueler` (`schueler_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `leiht` SET `schueler_id` = \'AGa\'
+WHERE `leiht`.`id` IN (\'37\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `leiht` SET `schueler_id` = \'AGa\'
+WHERE `leiht`.`id` IN (\'37\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `leiht` SET `schueler_id` = \'AGa\'
+WHERE `leiht`.`id` IN (\'37\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `leiht` SET `schueler_id` = :schueler_id:
+WHERE `leiht`.`id` IN :leiht.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Libraries\LeihtHelper.php(83): CodeIgniter\Model->update('37', [...])
+ 9 APPPATH\Controllers\Schueler.php(171): App\Libraries\LeihtHelper::setSchuelerId('37', 'AGa')
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerausweisBearbeiten('AGadsf', 'AGa', 'ROOTPATH\\public')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 12:43:12 --> Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'APPPATH\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Controllers\Schueler.php(40): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGb')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 12:43:42 --> Undefined variable $message
+in APPPATH\Views\errors\html\error_404.php on line 77.
+ 1 APPPATH\Views\errors\html\error_404.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $message', 'APPPATH\\Views\\errors\\html\\error_404.php', 77)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\html\\error_404.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('errors/html/error_404', [], true)
+ 5 APPPATH\Controllers\Schueler.php(40): view('errors/html/error_404')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('af')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

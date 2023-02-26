@@ -25,6 +25,17 @@ class SchuelerHelper
         $schuelerModel->update($id, $dbData);
     }
 
+    public static function setId($id, $newId)
+    {
+        $dbData = [
+            'schueler_id' => $newId,
+        ];
+        
+        $schuelerModel = new SchuelerModel();
+
+        $schuelerModel->update($id, $dbData);
+    }
+
     public static function add($id, $name, $mail = null)
     {
         $data = [
@@ -39,6 +50,12 @@ class SchuelerHelper
         $schuelerDbId = $schuelerModel->insert($data);
 
         return $schuelerDbId;
+    }
+
+    public static function deleteSchueler($id)
+    {
+        $schuelerModel = new SchuelerModel();
+        $schuelerModel->delete($id);
     }
 
     public static function getById($id)
