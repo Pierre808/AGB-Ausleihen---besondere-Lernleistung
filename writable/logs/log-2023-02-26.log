@@ -1,0 +1,7 @@
+CRITICAL - 2023-02-26 11:39:44 --> Array to string conversion
+in APPPATH\Controllers\Schueler.php on line 49.
+ 1 APPPATH\Controllers\Schueler.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Schueler.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGadsf')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -12,7 +12,7 @@
 
 <?= $this->section("content") ?>
     <div id="main">
-        <h1>Gegenstand:</h1>
+        <h1>Gegenstand: <?= esc($gegenstand['bezeichnung']) ?></h1>
 
         <div class="container-list">
             <div class="container">

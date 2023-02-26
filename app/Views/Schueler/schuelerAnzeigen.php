@@ -12,7 +12,7 @@
 
 <?= $this->section("content") ?>
     <div id="main">
-        <h1>Schüler:</h1>
+        <h1>Schüler: <?= esc($schueler['name']) ?></h1>
 
         <div class="container-list">
             <div class="container">
@@ -29,6 +29,21 @@
                 ?></p>
                 <p><span  class="big">Schueler-Id: </span><?= esc($schueler['schueler_id']) ?></p>
             </div>
+            
+            <div class=container>
+                <h2>Bearbeiten</h2>
+                <div class="pList">
+                    <p class="big">Name:</p>
+                    <?= form_open('show-schueler/'.esc($schueler['schueler_id'])) ?>
+                        <?= form_input('name', esc($schueler['name']), ['placeholder'=>esc($schueler['name']), 'id'=>'inputNoMargin'], 'text') ?>
+                        <input id="smallInputBtn" type="submit" value="Speichern"/>
+                    <?= form_close() ?>
 
+                    <br>
+                    
+                    <p class="big">Schueler-Id:</p>
+                    <button>Neuen Schülerausweis zuweisen</button>
+                </div>
+            </div>
         </div>
 <?= $this->endSection() ?>

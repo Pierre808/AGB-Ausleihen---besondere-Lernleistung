@@ -13,6 +13,17 @@ class SchuelerHelper
 
         return $schueler;
     }
+    
+    public static function setName($id, $name)
+    {
+        $dbData = [
+            'name' => $name,
+        ];
+        
+        $schuelerModel = new SchuelerModel();
+
+        $schuelerModel->update($id, $dbData);
+    }
 
     public static function add($id, $name, $mail = null)
     {

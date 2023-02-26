@@ -39,11 +39,22 @@ class Schueler extends BaseController
             return view('errors/html/error_404');
         }
 
+        if($this->request->getMethod() == "post")
+        {
+            $newName = $this->request->getPost('name');
+
+            SchuelerHelper::setName($schuelerId, $newName);
+
+            //prevent warning on reload caused by post request
+            return redirect()->to("show-schueler/" . $schuelerId);
+        }
+
+
         $data['page_title'] = "Schueler anzeigen";
         $data['menuName'] = "schueler";
 
         $data['schueler'] = $schueler;
-        
+
         return view('Schueler/schuelerAnzeigen', $data);
     }
 

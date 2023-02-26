@@ -49,7 +49,7 @@ $routes->match(['get', 'post'], '/show-gegenstand/(:segment)', 'Gegenstand::gege
 
 $routes->get('/all-schueler', 'Schueler::registrierteSchueler');
 $routes->match(['get', 'post'], '/add-schueler/(:segment)', 'Schueler::schuelerHinzufuegen/$1');
-$routes->get('/show-schueler/(:segment)', 'Schueler::schuelerAnzeigen/$1');
+$routes->match(['get', 'post'], '/show-schueler/(:segment)', 'Schueler::schuelerAnzeigen/$1');
 
 
 /*
