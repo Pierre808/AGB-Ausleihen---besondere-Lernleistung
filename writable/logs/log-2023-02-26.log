@@ -190,3 +190,80 @@ in APPPATH\Views\errors\html\error_404.php on line 77.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:08:48 --> Undefined variable $aktiveLeihgaben
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 53.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aktiveLeihgaben', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(69): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG5836')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:10:19 --> Class "App\Controllers\GegenstandHelper" not found
+in APPPATH\Controllers\Schueler.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:10:43 --> Class "App\Controllers\GegenstandHelper" not found
+in APPPATH\Controllers\Schueler.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:10:48 --> Undefined variable $verlauf
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 67.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $verlauf', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(71): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:11:26 --> Undefined array key "gegenstand_bezeichnung"
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 69.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gegenstand_bezeichnung"', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(69): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:12:13 --> Undefined array key "gegenstand_bezeichnung"
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 69.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gegenstand_bezeichnung"', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(71): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:13:13 --> Undefined variable $aktiveLeihgabe
+in APPPATH\Controllers\Schueler.php on line 64.
+ 1 APPPATH\Controllers\Schueler.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aktiveLeihgabe', 'APPPATH\\Controllers\\Schueler.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:13:16 --> Undefined variable $aktiveLeihgabe
+in APPPATH\Controllers\Schueler.php on line 64.
+ 1 APPPATH\Controllers\Schueler.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aktiveLeihgabe', 'APPPATH\\Controllers\\Schueler.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-26 23:13:32 --> Undefined array key "gegenstand_id"
+in APPPATH\Controllers\Schueler.php on line 64.
+ 1 APPPATH\Controllers\Schueler.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "gegenstand_id"', 'APPPATH\\Controllers\\Schueler.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG213')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

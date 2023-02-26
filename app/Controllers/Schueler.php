@@ -6,6 +6,7 @@ use App\Models\SchuelerModel;
 
 use App\Libraries\SchuelerHelper;
 use App\Libraries\LeihtHelper;
+use App\Libraries\GegenstandHelper;
 
 class Schueler extends BaseController
 {
@@ -55,6 +56,17 @@ class Schueler extends BaseController
         $data['menuName'] = "schueler";
 
         $data['schueler'] = $schueler;
+
+        $aktiveLeihgaben = LeihtHelper::getActiveBySchuelerId($schuelerId);
+
+        for($i = 0; $i < count($aktiveLeihgaben); $i++)
+        {
+            $gegenstand = GegenstandHelper::getById($aktiveLeihgaben[$i]['gegenstand_id']);
+            $aktiveLeihgaben[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
+        }
+        $data['aktiveLeihgaben'] = $aktiveLeihgaben;
+
+        $verlauf = LeihtHelper::getBySchuelerId($schuelerId);
 
         return view('Schueler/schuelerAnzeigen', $data);
     }

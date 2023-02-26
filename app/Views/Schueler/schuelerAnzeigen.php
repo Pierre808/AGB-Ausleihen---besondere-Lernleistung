@@ -45,5 +45,48 @@
                     <button onclick="location.href='<?= base_url('edit-schueler/' . esc($schueler['schueler_id'])) ?>'">Neuen Schülerausweis zuweisen</button>
                 </div>
             </div>
+
+            <div class="container">
+                <h2>Leiht gerade aus:</h2>
+
+                <?php
+                if(esc($aktiveLeihgaben) != null)
+                {
+                ?>
+                    <div>
+                        <?php
+                        for($i = 0; $i < count(esc($aktiveLeihgaben)); $i++)
+                        {
+                            $color = "row-light";
+
+                            if($i % 2 == 0)
+                            {
+                                $color = "row-dark";
+                            }
+                        ?>
+                        <a class="width100" href="<?= base_url("show-leihgabe/" . esc($aktiveLeihgaben[$i]['id'])) ?>">
+                        <div class="container-row <?= $color ?>">
+                            <p class="big">Bezeichnung: <span class="standart left-margin"><?= esc($aktiveLeihgaben[$i]['gegenstand_bezeichnung']) ?></span></p>
+                            <p class="big">Gegenstand-Id: <span class="standart left-margin"><?= esc($aktiveLeihgaben[$i]['gegenstand_id']) ?></span></p>
+                        </div>
+                        </a>
+                        <?php 
+                        }
+                        ?>
+                    </div>
+                <?php
+                }
+                else
+                {
+                ?>
+                    <div class="warning warning-green" id="warning100">
+                        <p>Bisher keine Verleihungen</p>
+                    </div>
+                    <br>
+                <?php
+                }
+                ?>
+            </div>
+            
         </div>
 <?= $this->endSection() ?>

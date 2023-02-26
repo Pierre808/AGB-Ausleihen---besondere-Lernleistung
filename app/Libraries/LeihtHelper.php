@@ -64,6 +64,14 @@ class LeihtHelper
         return $leiht;
     }
 
+    public static function getActiveBySchuelerId($schueler_id)
+    {
+        $leihtModel = new LeihtModel();
+        $leiht = $leihtModel->where("schueler_id", $schueler_id)->where("aktiv", 1)->Find();
+
+        return $leiht;
+    }
+
     public static function getBySchuelerId($schueler_id)
     {
         $leihtModel = new LeihtModel();
