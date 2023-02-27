@@ -64,10 +64,10 @@ class LeihtHelper
         return $leiht;
     }
 
-    public static function getActiveBySchuelerId($schueler_id)
+    public static function getActiveBySchuelerIdDESC($schueler_id)
     {
         $leihtModel = new LeihtModel();
-        $leiht = $leihtModel->where("schueler_id", $schueler_id)->where("aktiv", 1)->Find();
+        $leiht = $leihtModel->where("schueler_id", $schueler_id)->where("aktiv", 1)->OrderBy('datum_start', 'DESC')->Find();
 
         return $leiht;
     }
@@ -76,6 +76,13 @@ class LeihtHelper
     {
         $leihtModel = new LeihtModel();
         $leiht = $leihtModel->where("schueler_id", $schueler_id)->Find();
+
+        return $leiht;
+    }
+    public static function getBySchuelerIdDESC($schueler_id)
+    {
+        $leihtModel = new LeihtModel();
+        $leiht = $leihtModel->where("schueler_id", $schueler_id)->OrderBy('datum_start', 'DESC')->Find();
 
         return $leiht;
     }
@@ -131,4 +138,25 @@ class LeihtHelper
         return $leiht;
     }
 
+    public static function getUeberfaelligBySchuelerId($schuelerId)
+    {
+        $leihtModel = new LeihtModel();
+
+        $leiht = $leihtModel->where("aktiv", "1")->where('schueler_id', $schuelerId)->FindAll();
+
+        $count = count($leiht);
+        for($i = 0; $i < $count; $i++)
+        {
+            $date = $leiht[$i]['datum_ende'];
+            
+            if($date == "" || date("Y-m-d H:i:s") < $date)
+            {
+                unset($leiht[$i]);
+            }
+        }
+
+        $leiht = array_values($leiht);
+
+        return $leiht;
+    }
 }

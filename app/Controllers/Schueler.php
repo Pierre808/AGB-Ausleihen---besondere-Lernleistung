@@ -57,16 +57,22 @@ class Schueler extends BaseController
 
         $data['schueler'] = $schueler;
 
-        $aktiveLeihgaben = LeihtHelper::getActiveBySchuelerId($schuelerId);
-
-        for($i = 0; $i < count($aktiveLeihgaben); $i++)
+        $ueberfaellig = LeihtHelper::getUeberfaelligBySchuelerId($schuelerId);
+        for($i = 0; $i < count($ueberfaellig); $i++)
         {
-            $gegenstand = GegenstandHelper::getById($aktiveLeihgaben[$i]['gegenstand_id']);
-            $aktiveLeihgaben[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
+            $gegenstand = GegenstandHelper::getById($ueberfaellig[$i]['gegenstand_id']);
+            $ueberfaellig[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];  
+            $ueberfaellig[$i]['formated_datum_ende'] = date_format(date_create_from_format("Y-m-d H:i:s", $ueberfaellig[$i]['datum_ende']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
         }
-        $data['aktiveLeihgaben'] = $aktiveLeihgaben;
+        $data['ueberfaellig'] = $ueberfaellig;
 
-        $verlauf = LeihtHelper::getBySchuelerId($schuelerId);
+        $verlauf = LeihtHelper::getBySchuelerIdDESC($schuelerId);
+        for($i = 0; $i < count($verlauf); $i++)
+        {
+            $gegenstand = GegenstandHelper::getById($verlauf[$i]['gegenstand_id']);
+            $verlauf[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
+        }
+        $data['verlauf'] = $verlauf;
 
         return view('Schueler/schuelerAnzeigen', $data);
     }
