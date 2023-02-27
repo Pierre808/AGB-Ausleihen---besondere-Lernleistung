@@ -13,6 +13,14 @@ class SchuelerHelper
 
         return $schueler;
     }
+
+    public static function getAllOrderByName()
+    {
+        $schuelerModel = new SchuelerModel();
+        $schueler = $schuelerModel->OrderBy('name')->FindAll();
+
+        return $schueler;
+    }
     
     public static function setName($id, $name)
     {

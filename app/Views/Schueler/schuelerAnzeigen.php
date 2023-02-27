@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="<?= base_url('public/css/containers.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/forms.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/warning.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/spancolors.css') ?>">
 <?= $this->endSection() ?>
 
 
@@ -28,6 +29,12 @@
                     }
                 ?></p>
                 <p><span  class="big">Schueler-Id: </span><?= esc($schueler['schueler_id']) ?></p>
+                <?php 
+                    if(esc($isTemp))
+                    {
+                        echo('<p><span class="red">Temporär registriert. Bitte Schülerausweis hinterlegen</span> (siehe Bearbeiten: Neuen Schülerausweis zuweisen)</p>');
+                    }
+                ?>
             </div>
             
             <div class=container>

@@ -6,12 +6,15 @@
 <?= $this->section("headerLinks")?> 
 <link rel="stylesheet" href="<?= base_url('public/css/waiting.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/warning.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/buttons.css') ?>">
 <?= $this->endSection() ?>
 
 
 <?= $this->section("content") ?>
     <div id="main">
         <h1 id="title">Leihgabe erstellen:</h1>
+
+        <button onclick="location.href='<?= base_url('add-temp-schueler/') ?>'" class="button100">Schüler temporär ohne Schülerausweis registrieren</button>
 
         <div class="warning ">
             <p>

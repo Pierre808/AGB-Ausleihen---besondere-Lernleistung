@@ -84,3 +84,57 @@ in APPPATH\Controllers\Schueler.php on line 61.
  3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-27 10:24:30 --> Undefined variable $schuelerId
+in APPPATH\Controllers\Schueler.php on line 157.
+ 1 APPPATH\Controllers\Schueler.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Controllers\\Schueler.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->tempSchuelerHinzufuegen()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-27 10:24:42 --> Invalid file: Schueler/tempSchuelerHinzufuegen.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Schueler/tempSchuelerHinzufuegen.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/tempSchuelerHinzufuegen', [], true)
+ 3 APPPATH\Controllers\Schueler.php(165): view('Schueler/tempSchuelerHinzufuegen', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->tempSchuelerHinzufuegen()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-27 10:25:00 --> Undefined variable $schuelerId
+in APPPATH\Views\Schueler\tempSchuelerHinzufuegen.php on line 29.
+ 1 APPPATH\Views\Schueler\tempSchuelerHinzufuegen.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Views\\Schueler\\tempSchuelerHinzufuegen.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\tempSchuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/tempSchuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(165): view('Schueler/tempSchuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->tempSchuelerHinzufuegen()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-27 10:30:02 --> Undefined variable $schuelerId
+in APPPATH\Views\Schueler\tempSchuelerHinzufuegen.php on line 26.
+ 1 APPPATH\Views\Schueler\tempSchuelerHinzufuegen.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schuelerId', 'APPPATH\\Views\\Schueler\\tempSchuelerHinzufuegen.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\tempSchuelerHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/tempSchuelerHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(165): view('Schueler/tempSchuelerHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->tempSchuelerHinzufuegen()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-27 10:48:12 --> Undefined array key "id"
+in APPPATH\Controllers\Schueler.php on line 60.
+ 1 APPPATH\Controllers\Schueler.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Schueler.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG63fc7b4bba3e4TEMP')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-27 10:50:24 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 35.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 3 APPPATH\Controllers\Schueler.php(83): view('Schueler/schuelerAnzeigen', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AG63fc7b4bba3e4TEMP')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

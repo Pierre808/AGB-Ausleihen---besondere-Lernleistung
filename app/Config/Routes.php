@@ -49,6 +49,8 @@ $routes->match(['get', 'post'], '/show-gegenstand/(:segment)', 'Gegenstand::gege
 
 $routes->get('/all-schueler', 'Schueler::registrierteSchueler');
 $routes->match(['get', 'post'], '/add-schueler/(:segment)', 'Schueler::schuelerHinzufuegen/$1');
+$routes->match(['get', 'post'], '/add-temp-schueler', 'Schueler::tempSchuelerHinzufuegen');
+$routes->match(['get', 'post'], '/add-temp-schueler/(:any)', 'Schueler::tempSchuelerHinzufuegen/$1');
 $routes->match(['get', 'post'], '/show-schueler/(:segment)', 'Schueler::schuelerAnzeigen/$1');
 $routes->get('/edit-schueler/(:any)', 'Schueler::schuelerausweisBearbeiten/$1/$2');
 
