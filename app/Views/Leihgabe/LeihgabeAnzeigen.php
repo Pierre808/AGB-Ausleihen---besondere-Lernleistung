@@ -42,6 +42,7 @@
                     <p class="big">Ausgeliehen am: <span class="standart left-margin"><?= esc($leihgabe['formated_datum_start']) ?></span></p>
                     <p class="big">Ausgeliehen bis: <span class="standart left-margin"><?= esc($leihgabe['formated_datum_ende']) ?></span></p>
                     <p class="big">Zurückgegeben: <span class="standart left-margin <?= esc($leihgabe['zurueck_color']) ?>"><?= esc($leihgabe['zurueck_string']) ?></span></p>
+                    <p class="big">Ausgeliehen bei: <span class="standart left-margin"><?= esc($leihgabe['lehrer']) ?></span></p>
                 </div>
             </div>
         </div>

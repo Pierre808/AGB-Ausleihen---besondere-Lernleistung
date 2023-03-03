@@ -1,12 +1,12 @@
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 2px 0;
     display: inline-block;
     border: 1px solid var(--main);
     border-radius: 4px;
     box-sizing: border-box;
-    margin-bottom: 3vh;
+    margin-bottom: 1.5vh;
     font-size: 1em;
 }
 
@@ -18,8 +18,8 @@ input[type=submit], button{
     width: 100%;
     background-color: var(--main); 
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 12px 20px;
+    margin: 2px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -36,4 +36,16 @@ input[type=submit]:hover, button:hover {
 
 #inputNoMargin{
     margin: 0;
+}
+
+.input50Div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input50Div div{
+    width: 48%;
 }

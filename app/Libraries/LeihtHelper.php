@@ -6,7 +6,7 @@ use App\Models\LeihtModel;
 
 class LeihtHelper
 {
-    public static function add($schueler_id, $gegenstand_id, $datum_start = false, $datum_ende = false, $weitere = false, $aktiv = 1)
+    public static function add($schueler_id, $gegenstand_id, $datum_start = false, $datum_ende = false, $weitere = false, $lehrer = false, $aktiv = 1)
     {
         $datumStart = $datum_start;
         $datumEnde = $datum_ende;
@@ -26,6 +26,7 @@ class LeihtHelper
             'datum_start' => $datumStart,
             'datum_ende' => $datumEnde,
             'weitere' => $weitere,
+            'lehrer' => $lehrer,
             'aktiv'    => $aktiv,
         ];
 

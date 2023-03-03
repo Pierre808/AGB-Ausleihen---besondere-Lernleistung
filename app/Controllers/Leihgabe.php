@@ -101,7 +101,7 @@ class Leihgabe extends BaseController
     }
 
     //nachdem der schuelerausweis eingescannt wurde, wird diese seite aufgerufen (siehe leihgabe erstellen)
-    public function gegenstandHinzufuegen($schuelerId = false, $gegenstandId = false, $weitere = false, $datumEnde = false)
+    public function gegenstandHinzufuegen($schuelerId = false, $gegenstandId = false, $weitere = false, $lehrer = false, $datumEnde = false)
     {
         if($schuelerId == false)
         {
@@ -137,9 +137,14 @@ class Leihgabe extends BaseController
                     $weitereCropped = substr($weitere, 8);
                     if($weitereCropped == "")
                     {
-                        $weitereCropped = false;
+                        $weitereCropped = 0;
                     }
 
+                    $lehrerCropped = substr($lehrer, 7);
+                    if($lehrerCropped == "")
+                    {
+                        $lehrerCropped = "/";
+                    }
                     
                     $d = false;
                     if($datumEnde != false)
@@ -153,7 +158,7 @@ class Leihgabe extends BaseController
                     }
 
                     
-                    $rowId = LeihtHelper::add($schuelerId, $gegenstandId,date("Y-m-d H:i:s"), $d, $weitereCropped);
+                    $rowId = LeihtHelper::add($schuelerId, $gegenstandId,date("Y-m-d H:i:s"), $d, $weitereCropped, $lehrerCropped);
                     
                     
 

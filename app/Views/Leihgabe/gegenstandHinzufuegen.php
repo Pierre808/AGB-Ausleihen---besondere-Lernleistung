@@ -51,9 +51,17 @@
                 echo form_input($data);
             ?>
 
-            <label for="weitere"><b>Weitere Schüler</b></label>
-            <?= form_input('weitere', set_value('weitere'), ['placeholder'=>'Weitere Schüler, die an der Leihgabe beteiligt sind', 'id' => 'weitere-input'], 'text') ?>
-            
+            <div class="input50Div">
+                <div>    
+                    <label for="weitere"><b>Weitere Schüler</b></label>
+                    <?= form_input('weitere', set_value('weitere'), ['placeholder'=>'Weitere Schüler, die an der Leihgabe beteiligt sind', 'id' => 'weitere-input'], 'text') ?>
+                </div>
+                <div>
+                    <label for="weitere"><b>Lehrer</b></label>
+                    <?= form_input('lehrer', set_value('lehrer'), ['placeholder'=>'Lehrer, der den Gegenstand verleiht', 'id' => 'lehrer-input'], 'text') ?>
+                </div>
+            </div>
+
             <label for="datum-ende"><b>Ende der Leihgabe</b></label>
             <br>
             <?= form_input('datum-ende-aktiv', set_value('datum-ende-aktiv'), ['placeholder'=>'', 'id' => 'datum-checkbox'], 'checkbox') ?>
@@ -193,7 +201,7 @@
             document.addEventListener("keydown", e => {
                 if(e.key != "Shift" && e.key != "Enter" && e.key != "Control") {
                     
-                    if(document.getElementById("weitere-input") === document.activeElement || document.getElementById("datum-input") === document.activeElement)
+                    if(document.getElementById("weitere-input") === document.activeElement || document.getElementById("lehrer-input") === document.activeElement || document.getElementById("datum-input") === document.activeElement)
                     {
                         console.log('not reading code');
                         return;
@@ -217,7 +225,7 @@
                 if(currentCode == code && currentCode != " ") {
                     console.log("finished code: " + code);
 
-                    var location = "<?= base_url("add-gegenstand-to-leihgabe/" . esc($schuelerId)) ?>/" + code + '/weitere=' + document.getElementById("weitere-input").value;
+                    var location = "<?= base_url("add-gegenstand-to-leihgabe/" . esc($schuelerId)) ?>/" + code + '/weitere=' + document.getElementById("weitere-input").value + '/lehrer=' + document.getElementById("lehrer-input").value;
 
                     if(document.getElementById('datum-checkbox').checked == true)
                     {
