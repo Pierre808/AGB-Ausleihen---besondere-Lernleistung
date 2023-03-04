@@ -16,7 +16,7 @@
         <div class="buttonlist">
             <button onclick="location.href='<?= base_url('add-leihgabe') ?>'">Gegenstand verleihen</button>
             <button onclick="location.href='<?= base_url('') ?>'">Gegenstand zurückgeben</button>
-            <button onclick="location.href='<?= base_url('') ?>'">Schülerdaten anzeigen</button>
+            <button onclick="location.href='<?= base_url('schuelerdaten-anzeigen') ?>'">Schülerdaten anzeigen</button>
         </div>
 
         <h1>Überfällige Leihgaben:</h1>

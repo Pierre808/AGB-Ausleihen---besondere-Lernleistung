@@ -83,6 +83,35 @@ class Schueler extends BaseController
         return view('Schueler/schuelerAnzeigen', $data);
     }
 
+    public function schuelerScannen($schuelerId = false)
+    {
+        $data['page_title'] = "Schuelerdaten anzeigen";
+        $data['menuName'] = "schueler";
+
+        $data['schuelerId'] = $schuelerId;
+
+        $error = "";
+
+        if($schuelerId != false)
+        {
+            $schueler = SchuelerHelper::getById($schuelerId);
+
+            if(!str_starts_with($schuelerId, getenv('SCHUELER_PREFIX')))
+            {
+                $error = "Der Barcode entspricht nicht den Bedingungen eines Schülerausweises";
+            }
+            else if($schueler == null)
+            {
+                $error = "Es ist kein Schueler mit diesem Schuelerausweis registriert";
+            }
+
+        }
+
+        $data['error'] = $error;
+
+        return view('Schueler/schuelerScannen', $data);
+    }
+
     public function schuelerHinzufuegen($schuelerId = false)
     {
         if($schuelerId == false)

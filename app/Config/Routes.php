@@ -54,6 +54,8 @@ $routes->match(['get', 'post'], '/add-temp-schueler', 'Schueler::tempSchuelerHin
 $routes->match(['get', 'post'], '/add-temp-schueler/(:any)', 'Schueler::tempSchuelerHinzufuegen/$1');
 $routes->match(['get', 'post'], '/show-schueler/(:segment)', 'Schueler::schuelerAnzeigen/$1');
 $routes->get('/edit-schueler/(:any)', 'Schueler::schuelerausweisBearbeiten/$1/$2');
+$routes->get('/schuelerdaten-anzeigen', 'Schueler::schuelerScannen');
+$routes->get('/schuelerdaten-anzeigen/(:any)', 'Schueler::schuelerScannen/$1');
 
 
 /*

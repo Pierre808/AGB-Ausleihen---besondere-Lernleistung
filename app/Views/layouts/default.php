@@ -45,21 +45,21 @@
 
             <a href="<?= base_url("all-leihgabe") ?>">
                 <div class="menu-link <?php if(esc($menuName) == "leihgaben"){echo("active");} ?>">
-                    <img src="<?= base_url("public/imgs/home.png") ?>"/>
+                    <img src="<?= base_url("public/imgs/leihgaben2.png") ?>"/>
                     <p>Alle Leihgaben</p>
                 </div>
             </a>
 
             <a href="<?= base_url("all-schueler") ?>">
                 <div class="menu-link <?php if(esc($menuName) == "schueler"){echo("active");} ?>">
-                    <img src="<?= base_url("public/imgs/home.png") ?>"/>
+                    <img src="<?= base_url("public/imgs/account.png") ?>"/>
                     <p>Registrierte Schüler</p>
                 </div>
             <a>
 
             <a href="<?= base_url("all-gegenstande") ?>">
                 <div class="menu-link <?php if(esc($menuName) == "gegenstande"){echo("active");} ?>">
-                    <img src="<?= base_url("public/imgs/home.png") ?>"/>
+                    <img src="<?= base_url("public/imgs/gegenstand.png") ?>"/>
                     <p>Registrierte Gegenstände</p>
                 </div>
             <a>
