@@ -47,6 +47,8 @@ $routes->get('/add-gegenstand', 'Gegenstand::gegenstandRegistrieren');
 $routes->get('/add-gegenstand/(:any)', 'Gegenstand::gegenstandRegistrieren/$1/$2');
 $routes->match(['get', 'post'], '/show-gegenstand/(:segment)', 'Gegenstand::gegenstandAnzeigen/$1');
 $routes->get('/edit-gegenstand/(:any)', 'Gegenstand::barcodeBearbeiten/$1/$2');
+$routes->get('/gegenstand-zurueckgeben', 'Gegenstand::gegenstandZurueckgeben');
+$routes->get('/gegenstand-zurueckgeben/(:any)', 'Gegenstand::gegenstandZurueckgeben/$1');
 
 $routes->get('/all-schueler', 'Schueler::registrierteSchueler');
 $routes->match(['get', 'post'], '/add-schueler/(:segment)', 'Schueler::schuelerHinzufuegen/$1');

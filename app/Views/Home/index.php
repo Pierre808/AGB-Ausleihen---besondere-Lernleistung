@@ -15,7 +15,7 @@
         <h1>Schnellzugriff:</h1>
         <div class="buttonlist">
             <button onclick="location.href='<?= base_url('add-leihgabe') ?>'">Gegenstand verleihen</button>
-            <button onclick="location.href='<?= base_url('') ?>'">Gegenstand zurückgeben</button>
+            <button onclick="location.href='<?= base_url('gegenstand-zurueckgeben') ?>'">Gegenstand zurückgeben</button>
             <button onclick="location.href='<?= base_url('schuelerdaten-anzeigen') ?>'">Schülerdaten anzeigen</button>
         </div>
 

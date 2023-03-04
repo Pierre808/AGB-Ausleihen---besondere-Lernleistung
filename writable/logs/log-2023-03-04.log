@@ -220,3 +220,50 @@ in APPPATH\Controllers\Schueler.php on line 99.
  3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 16:59:54 --> Undefined variable $newId
+in APPPATH\Views\Gegenstand\gegenstandZurueckgeben.php on line 74.
+ 1 APPPATH\Views\Gegenstand\gegenstandZurueckgeben.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $newId', 'APPPATH\\Views\\Gegenstand\\gegenstandZurueckgeben.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandZurueckgeben.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandZurueckgeben', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(177): view('Gegenstand/gegenstandZurueckgeben', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandZurueckgeben()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:01:40 --> Undefined variable $newId
+in APPPATH\Views\Gegenstand\gegenstandZurueckgeben.php on line 74.
+ 1 APPPATH\Views\Gegenstand\gegenstandZurueckgeben.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $newId', 'APPPATH\\Views\\Gegenstand\\gegenstandZurueckgeben.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandZurueckgeben.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandZurueckgeben', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(177): view('Gegenstand/gegenstandZurueckgeben', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandZurueckgeben()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:01:50 --> Undefined variable $error
+in APPPATH\Views\Gegenstand\gegenstandZurueckgeben.php on line 117.
+ 1 APPPATH\Views\Gegenstand\gegenstandZurueckgeben.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $error', 'APPPATH\\Views\\Gegenstand\\gegenstandZurueckgeben.php', 117)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\gegenstandZurueckgeben.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandZurueckgeben', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(177): view('Gegenstand/gegenstandZurueckgeben', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandZurueckgeben()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:06:35 --> Undefined variable $LeihtHelper
+in APPPATH\Controllers\Gegenstand.php on line 182.
+ 1 APPPATH\Controllers\Gegenstand.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $LeihtHelper', 'APPPATH\\Controllers\\Gegenstand.php', 182)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandZurueckgeben('A')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:07:12 --> Undefined variable $schueler
+in APPPATH\Controllers\Gegenstand.php on line 188.
+ 1 APPPATH\Controllers\Gegenstand.php(188): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $schueler', 'APPPATH\\Controllers\\Gegenstand.php', 188)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandZurueckgeben('GE')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

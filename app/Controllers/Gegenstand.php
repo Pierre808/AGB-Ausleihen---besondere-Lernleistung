@@ -166,4 +166,42 @@ class Gegenstand extends BaseController
 
         return view('Gegenstand/barcodeBearbeiten', $data);
     }
+
+    public function gegenstandZurueckgeben($gegenstandId = false)
+    {
+        $data['page_title'] = "Barcode neu zuweisen";
+        $data['menuName'] = "gegenstand";
+        
+        $data['gegenstandId'] = $gegenstandId;
+
+        $error = "";
+
+        if($gegenstandId != false)
+        {
+            $gegenstand = GegenstandHelper::getById($gegenstandId);
+            $aktiveLeihgabe = LeihtHelper::getActiveByGegenstandId($gegenstandId);
+
+            if(!str_starts_with($gegenstandId, getenv('GEGENSTAND_PREFIX')))
+            {
+                $error = "Der Barcode entspricht nicht den Bedingungen eines Gegenstandes";
+            }
+            else if($gegenstand == null)
+            {
+                $error = "Es ist kein Gegenstand mit diesem Barcode registriert";
+            }
+            else if($gegenstand != null && $aktiveLeihgabe == null)
+            {
+                $error = "Der Gegenstand ist aktuell nicht verliehen";
+            }
+
+            if($error == "")
+            {
+                LeihtHelper::setAktiv($aktiveLeihgabe['id'], 0);
+            }
+        }
+
+        $data['error'] = $error;
+
+        return view('Gegenstand/gegenstandZurueckgeben', $data);
+    }
 }

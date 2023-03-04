@@ -171,4 +171,15 @@ class LeihtHelper
 
         return $leiht;
     }
+
+    public static function setAktiv($id, $aktiv)
+    {
+        $dbData = [
+            'aktiv' => $aktiv,
+        ];
+        
+        $leihtModel = new LeihtModel();
+
+        $leihtModel->update($id, $dbData);
+    }
 }
