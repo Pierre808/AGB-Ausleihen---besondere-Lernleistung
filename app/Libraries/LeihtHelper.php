@@ -99,6 +99,17 @@ class LeihtHelper
         $leihtModel->update($id, $dbData);
     }
 
+    public static function setGegenstandId($id, $newGegenstandId)
+    {
+        $dbData = [
+            'gegenstand_id' => $newGegenstandId,
+        ];
+        
+        $leihtModel = new LeihtModel();
+
+        $leihtModel->update($id, $dbData);
+    }
+
     //gets by leihgaben_id
     public static function getById($id)
     {

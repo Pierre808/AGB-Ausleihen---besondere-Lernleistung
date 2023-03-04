@@ -113,4 +113,57 @@ class Gegenstand extends BaseController
 
         return view('Gegenstand/gegenstandAnzeigen', $data);
     }
+
+    public function barcodeBearbeiten($gegenstandId = false, $newId = false)
+    {
+        if($gegenstandId == false)
+        {
+            return view('errors/html/error_404');
+        }
+
+        $data['page_title'] = "Barcode neu zuweisen";
+        $data['menuName'] = "gegenstand";
+        
+        $data['gegenstandId'] = $gegenstandId;
+        $data['newId'] = $newId;
+
+        $error = "";
+
+        if($newId != false)
+        {
+            $gegenstand = GegenstandHelper::getById($newId);
+
+            if($gegenstand != null)
+            {
+                $error = "Es ist bereits ein Gegenstand mit diesem Barcode registriert";
+            }
+            else if(!str_starts_with($newId, getenv('GEGENSTAND_PREFIX')))
+            {
+                $error = "Der Barcode entspricht nicht den Bedingungen eines Gegenstandes";
+            }
+
+            if($error != "")
+            {
+            }
+            else
+            {
+                //update FK
+                $gegenstandOld = GegenstandHelper::getById($gegenstandId);
+                GegenstandHelper::add($newId, $gegenstandOld['bezeichnung']);
+                
+                $leiht = LeihtHelper::getBygegenstandId($gegenstandId);
+
+                for($i = 0; $i < count($leiht); $i++)
+                {
+                    LeihtHelper::setGegenstandId($leiht[$i]['id'], $newId);
+                }
+
+                GegenstandHelper::deleteGegenstand($gegenstandId);
+            }
+        }
+
+        $data['error'] = $error;
+
+        return view('Gegenstand/barcodeBearbeiten', $data);
+    }
 }

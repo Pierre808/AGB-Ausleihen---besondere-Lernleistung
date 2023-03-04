@@ -58,7 +58,7 @@
                     <br>
                     
                     <p class="big">Barcode / Gegenstand-Id:</p>
-                    <button>Neuen Barcode zuweisen</button>
+                    <button onclick="location.href='<?= base_url('edit-gegenstand/' . esc($gegenstand['gegenstand_id'])) ?>'">Neuen Barcode zuweisen</button>
                 </div>
             </div>
 

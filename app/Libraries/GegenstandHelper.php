@@ -48,4 +48,10 @@ class GegenstandHelper
         $gegenstandModel->update($id, $dbData);
     }
 
+    public static function deleteGegenstand($id)
+    {
+        $gegenstandModel = new GegenstandModel();
+        $gegenstandModel->delete($id);
+    }
+
 }
