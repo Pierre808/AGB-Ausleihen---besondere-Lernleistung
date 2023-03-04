@@ -126,7 +126,7 @@ class Leihgabe extends BaseController
             //found gegenstand and add it to leiht table in database
             if($gegenstand != null)
             {
-                $dbEntry = LeihtHelper::getActiveByIds($schuelerId, $gegenstandId);
+                $dbEntry = LeihtHelper::getActiveByGegenstandId($gegenstandId);
                 
                 if($dbEntry != null)
                 {
