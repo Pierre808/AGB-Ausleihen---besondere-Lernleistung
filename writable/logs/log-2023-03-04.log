@@ -267,3 +267,14 @@ in APPPATH\Controllers\Gegenstand.php on line 188.
  3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 23:03:22 --> Undefined variable $ueberfaellig_checked
+in APPPATH\Views\Leihgabe\alleLeihgaben.php on line 57.
+ 1 APPPATH\Views\Leihgabe\alleLeihgaben.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ueberfaellig_checked', 'APPPATH\\Views\\Leihgabe\\alleLeihgaben.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Leihgabe\\alleLeihgaben.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/alleLeihgaben', [], true)
+ 5 APPPATH\Controllers\Leihgabe.php(68): view('Leihgabe/alleLeihgaben', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->alleLeihgaben()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

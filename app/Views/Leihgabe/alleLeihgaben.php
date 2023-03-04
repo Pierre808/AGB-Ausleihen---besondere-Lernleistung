@@ -5,6 +5,7 @@
 
 <?= $this->section("headerLinks")?> 
 <link rel="stylesheet" href="<?= base_url('public/css/containers.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/forms.css') ?>">
 <?= $this->endSection() ?>
 
 
@@ -12,6 +13,71 @@
     <div id="main">
         <h1>Alle Leihgaben:</h1>
 
+        <div class="filter-container">
+            <?= form_open('all-leihgabe/filter') ?>
+                <div class="filter-search">
+                        <div class="inputs">
+                            <div class="input">
+                                <img src="<?= base_url('public/imgs/suche.png') ?>"/>
+                                <?= form_input('schueler', set_value('schueler'), ['placeholder'=>'Schülername'], 'text') ?>
+                            </div>
+                            <div class="input">
+                                <img src="<?= base_url('public/imgs/suche.png') ?>"/>
+                                <?= form_input('lehrer', set_value('lehrer'), ['placeholder'=>'Lehrername'], 'text') ?>
+                            </div>  
+                            <div class="input" id="last">
+                                <img src="<?= base_url('public/imgs/suche.png') ?>"/>
+                                <?= form_input('gegenstand', set_value('gegenstand'), ['placeholder'=>'Gegenstandsbezeichnung'], 'text') ?>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Suchen"/>
+                </div>
+                <div class="filter-checkboxes">
+                    <div class="checkbox">
+                        <label class="checkbox-container">
+                            Aktive Leihgaben <?php 
+                            if(esc($post))
+                            {
+                                 echo(esc($active_checked)); 
+                            } ?>
+                            <input type="checkbox" id="active" name="active" value="yes" <?php
+                                if(esc($post) == true)
+                                {
+                                    if(esc($active_checked) == true)
+                                    {
+                                        echo('checked');
+                                    }
+                                }
+                                else{
+                                    echo('checked');
+                                }
+                            ?>>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-container">
+                            Überfällige Leihgaben <?php 
+                            if(esc($post))
+                            {
+                                 echo(esc($ueberfaellig_checked)); 
+                            } ?>
+                            <input type="checkbox" id="ueberfaellig" value="yes" name="ueberfaellig" <?php
+                                if(esc($post) == true)
+                                {
+                                    if(esc($ueberfaellig_checked) == true)
+                                    {
+                                        echo('checked');
+                                    }
+                                }
+                            ?>>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            <?= form_close() ?>
+        </div>
         
         <div class="container-list">
             <?php

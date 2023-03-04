@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 $routes->get('/all-leihgabe', 'Leihgabe::alleLeihgaben');
+$routes->match(['get', 'post'], '/all-leihgabe/(:any)', 'Leihgabe::alleLeihgaben/$1');
 $routes->get('/add-leihgabe', 'Leihgabe::leihgabeErstellen');
 $routes->get('/add-gegenstand-to-leihgabe/(:any)', 'Leihgabe::gegenstandHinzufuegen/$1/$2');
 $routes->get('/show-leihgabe/(:segment)', 'Leihgabe::LeihgabeAnzeigen/$1');

@@ -10,7 +10,7 @@
 .container{
     width: 100%;
     height: auto;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.24);
     padding: 2% 5%;
 }
 
@@ -34,7 +34,7 @@
 .box-container{
     width: 80%;
     height: auto;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.24);
     padding: 2% 5%;
     margin: 0 auto;
 }
@@ -62,4 +62,159 @@
 
 .row-light{
     background-color: #ffffff;
+}
+
+
+
+
+
+
+.filter-container{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.42);
+    margin-bottom: 4vh;
+}
+
+.filter-container form{
+    width: 100%;
+    height: auto;
+}
+
+.filter-container form .filter-search{ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.filter-container form .filter-search .inputs{ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-container .filter-search .input{ 
+    width: 28%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-right: 1px solid #b9b9b9;
+}
+
+.filter-container .filter-search .input img{ 
+    width: 20%;
+    height: 40%;
+    object-fit: contain;
+    filter: invert(60%);
+    margin-left: 5%;
+}
+
+.filter-container form .filter-search input[type=text]{ 
+    width: 100%;
+    border-radius: 0;
+    padding: 24px 20px;
+    margin: 0;
+    border: none;
+    font-size: 1.2em;
+}
+.filter-container .filter-search #last{ 
+    border-right: none;
+    width: 40%;
+}
+
+.filter-container form .filter-search input[type=submit], button{ 
+    width: 20%;
+    margin: 1.5% 3% 1.5% 0;
+}
+
+.filter-container form .filter-checkboxes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.filter-container form .filter-checkboxes .checkbox{
+    margin: 1.5% 5%;
+}
+
+/* The container */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 3vw;
+    cursor: pointer;
+    font-size: 1.1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    height: 2vw;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2vw;
+    width: 2vw;
+    background-color: #dfdfdf;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+    left: 0.75vw;
+    top: 0.25vw;
+    width: 0.5vw;
+    height: 1vw;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+  
+@media screen and (max-width: 520px) {
+    .filter-container{
+        display: none;
+    }
 }

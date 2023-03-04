@@ -22,11 +22,31 @@ class Leihgabe extends BaseController
         helper(['url', 'form']);
     }
 
-    public function alleLeihgaben()
+    public function alleLeihgaben($filter=false)
     {
         $data['page_title'] = "Alle Leihgaben";
         $data['menuName'] = "leihgaben";
         
+        $data['post'] = false;
+
+        if($this->request->getMethod() == "post")
+        {
+            $data['post'] = true;
+            
+            $data['active_checked'] = false;
+            if($this->request->getPost('active') == "yes")
+            {
+                $data['active_checked'] = true;
+            }
+
+            $data['ueberfaellig_checked'] = false;
+            if($this->request->getPost('ueberfaellig') == "yes")
+            {
+                $data['ueberfaellig_checked'] = true;
+            }
+        }
+
+
         $activeLeihgaben = LeihtHelper::getActiveDesc();
 
         for($i = 0; $i < count($activeLeihgaben); $i++)
