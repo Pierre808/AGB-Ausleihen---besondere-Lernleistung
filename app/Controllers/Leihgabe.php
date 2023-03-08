@@ -17,7 +17,7 @@ class Leihgabe extends BaseController
 {
     public function __construct()
     {
-        //$this->db = \Config\Database::connect();
+        $this->db = \Config\Database::connect();
         
         helper(['url', 'form']);
     }
@@ -29,38 +29,203 @@ class Leihgabe extends BaseController
         
         $data['post'] = false;
 
+
+        $leihgaben = LeihtHelper::getActiveDesc();
+
+
         if($this->request->getMethod() == "post")
         {
+            //SQL command
+            $sql = "SELECT * FROM leiht";
+            $filterErrors = [];
+            $sqlWhere = false;
+
+
+
             $data['post'] = true;
-            
+
             $data['active_checked'] = false;
             if($this->request->getPost('active') == "yes")
             {
                 $data['active_checked'] = true;
+                $sql .= " WHERE aktiv = 1";
+                $sqlWhere = true;
             }
 
             $data['ueberfaellig_checked'] = false;
             if($this->request->getPost('ueberfaellig') == "yes")
             {
                 $data['ueberfaellig_checked'] = true;
+                
+                if($sqlWhere)
+                {
+                    $sql .= " AND ";
+                }
+                else
+                {
+                    $sql .= " WHERE ";
+                    $sqlWhere = true;
+                }
+
+                $sql .= "datum_ende IS NOT NULL AND datum_ende < '" . date("Y-m-d H:i:s") . "'";
             }
+
+            
+
+            
+            if($this->request->getPost('schueler') != "")
+            {
+                $validSchueler = [];
+
+                $schueler = SchuelerHelper::getAllNamesGrouped();
+                for($i = 0; $i < count($schueler); $i++)
+                {
+                    if(str_contains(strtoupper($schueler[$i]['name']), strtoupper($this->request->getPost('schueler'))))
+                    {
+                        array_push($validSchueler, $schueler[$i]['schueler_id']);
+                    }
+                }
+
+                if(count($validSchueler) == 0)
+                {
+                    array_push($filterErrors, "Keine Schüler mit diesem Namen gefunden");
+                }
+                else
+                {
+                    if($sqlWhere)
+                    {
+                        $sql .= " AND (";
+                    }
+                    else
+                    {
+                        $sql .= " WHERE (";
+                        $sqlWhere = true;
+                    }
+
+                    for($i = 0; $i < count($validSchueler); $i++)
+                    {
+                        if($i != 0)
+                        {
+                            $sql .= " OR ";
+                        }
+
+                        $sql .= "schueler_id = '{$validSchueler[$i]}'";
+                    }
+
+                    $sql .= ")";
+                }
+            }
+            if($this->request->getPost('lehrer') != "")
+            {
+                $validLehrer = [];
+
+                $lehrer = LeihtHelper::getAllLehrer();
+                for($i = 0; $i < count($lehrer); $i++)
+                {
+                    if(str_contains(strtoupper($lehrer[$i]['lehrer']), strtoupper($this->request->getPost('lehrer'))))
+                    {
+                        array_push($validLehrer, $lehrer[$i]['lehrer']);
+                    }
+                }
+
+                if(count($validLehrer) == 0)
+                {
+                    array_push($filterErrors, "Keine Lehrer mit diesem Namen gefunden");
+                }
+                else
+                {
+                    if($sqlWhere)
+                    {
+                        $sql .= " AND (";
+                    }
+                    else
+                    {
+                        $sql .= " WHERE (";
+                        $sqlWhere = true;
+                    }
+
+                    for($i = 0; $i < count($validLehrer); $i++)
+                    {
+                        if($i != 0)
+                        {
+                            $sql .= " OR ";
+                        }
+
+                        $sql .= "lehrer = '{$validLehrer[$i]}'";
+                    }
+
+                    $sql .= ")";
+                }
+            }
+            if($this->request->getPost('gegenstand') != "")
+            {
+                $validGegenstaende = [];
+
+                $gegenstaende = GegenstandHelper::getAllBezeichnungen();
+                for($i = 0; $i < count($gegenstaende); $i++)
+                {
+                    if(str_contains(strtoupper($gegenstaende[$i]['bezeichnung']), strtoupper($this->request->getPost('gegenstand'))))
+                    {
+                        array_push($validGegenstaende, $gegenstaende[$i]['gegenstand_id']);
+                    }
+                }
+
+                if(count($validGegenstaende) == 0)
+                {
+                    array_push($filterErrors, "Keine Gegenstände mit diesem Namen gefunden");
+                }
+                else
+                {
+                    if($sqlWhere)
+                    {
+                        $sql .= " AND (";
+                    }
+                    else
+                    {
+                        $sql .= " WHERE (";
+                        $sqlWhere = true;
+                    }
+
+                    for($i = 0; $i < count($validGegenstaende); $i++)
+                    {
+                        if($i != 0)
+                        {
+                            $sql .= " OR ";
+                        }
+
+                        $sql .= "gegenstand_id = '{$validGegenstaende[$i]}'";
+                    }
+
+                    $sql .= ")";
+                }
+            }
+
+            $data['sql'] = $sql;
+
+            $db = db_connect();
+            $query = $db->query($sql);
+
+            $leihgaben = $query->getResult('array');
         }
 
 
-        $activeLeihgaben = LeihtHelper::getActiveDesc();
-
-        for($i = 0; $i < count($activeLeihgaben); $i++)
+        for($i = 0; $i < count($leihgaben); $i++)
         {
-            $schueler = SchuelerHelper::getById($activeLeihgaben[$i]['schueler_id']);
-            $activeLeihgaben[$i]['schueler_name'] = $schueler['name'];
+            $schueler = SchuelerHelper::getById($leihgaben[$i]['schueler_id']);
+            $leihgaben[$i]['schueler_name'] = $schueler['name'];
 
-            $gegenstand = GegenstandHelper::getById($activeLeihgaben[$i]['gegenstand_id']);
-            $activeLeihgaben[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
+            $gegenstand = GegenstandHelper::getById($leihgaben[$i]['gegenstand_id']);
+            $leihgaben[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
 
-            $activeLeihgaben[$i]['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $activeLeihgaben[$i]['datum_start']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
+            $leihgaben[$i]['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgaben[$i]['datum_start']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
         }
 
-        $data['active'] = $activeLeihgaben;
+        $data['active'] = $leihgaben;
+
+
+        $data['alleSchueler'] = SchuelerHelper::getAll();
+        $data['alleGegenstände'] = GegenstandHelper::getAll();
+        $data['alleLehrer'] = LeihtHelper::getAllLehrer();
 
         return view('Leihgabe/alleLeihgaben', $data);
     }

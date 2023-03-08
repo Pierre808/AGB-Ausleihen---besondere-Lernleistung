@@ -37,6 +37,14 @@ class GegenstandHelper
         return $gegenstand;
     }
 
+    public static function getAllBezeichnungen()
+    {
+        $gegenstandModel = new GegenstandModel();
+        $gegenstand = $gegenstandModel->GroupBy('bezeichnung')->FindAll();
+
+        return $gegenstand;
+    }
+
     public static function setBezeichnung($id, $bezeichnung)
     {
         $dbData = [

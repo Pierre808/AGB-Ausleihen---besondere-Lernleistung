@@ -74,4 +74,20 @@ class SchuelerHelper
         return $schueler;
     }
 
+    public static function getByNameGrouped($name)
+    {
+        $schuelerModel = new SchuelerModel();
+        $schueler = $schuelerModel->where("name", $name)->GroupBy('name')->FindAll();
+
+        return $schueler;
+    }
+
+    public static function getAllNamesGrouped()
+    {
+        $schuelerModel = new SchuelerModel();
+        $schueler = $schuelerModel->groupBy('name')->FindAll();
+
+        return $schueler;
+    }
+
 }

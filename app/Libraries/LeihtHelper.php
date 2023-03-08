@@ -182,4 +182,13 @@ class LeihtHelper
 
         $leihtModel->update($id, $dbData);
     }
+
+    public static function getAllLehrer()
+    {
+        $leihtModel = new LeihtModel();
+
+        $leiht = $leihtModel->GroupBy('lehrer')->FindAll();
+
+        return $leiht;
+    }
 }

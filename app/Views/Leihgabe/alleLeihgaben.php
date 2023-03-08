@@ -36,11 +36,7 @@
                 <div class="filter-checkboxes">
                     <div class="checkbox">
                         <label class="checkbox-container">
-                            Aktive Leihgaben <?php 
-                            if(esc($post))
-                            {
-                                 echo(esc($active_checked)); 
-                            } ?>
+                            Aktive Leihgaben
                             <input type="checkbox" id="active" name="active" value="yes" <?php
                                 if(esc($post) == true)
                                 {
@@ -58,11 +54,7 @@
                     </div>
                     <div class="checkbox">
                         <label class="checkbox-container">
-                            Überfällige Leihgaben <?php 
-                            if(esc($post))
-                            {
-                                 echo(esc($ueberfaellig_checked)); 
-                            } ?>
+                            Überfällige Leihgaben
                             <input type="checkbox" id="ueberfaellig" value="yes" name="ueberfaellig" <?php
                                 if(esc($post) == true)
                                 {
@@ -92,6 +84,7 @@
                             <p class="big">Name Schüler: <span class="standart left-margin"><?= $infos['schueler_name'] ?></span></p>
                             <p class="big">Gegenstand: <span class="standart left-margin"><?= $infos['gegenstand_bezeichnung'] ?></span></p>
                             <p class="big">Ausgeliehen am: <span class="standart left-margin"><?= $infos['formated_datum_start'] ?></span></p>
+                            <p class="big">Ausgeliehen bei: <span class="standart left-margin"><?= $infos['lehrer'] ?></span></p>
                         </div>
                     </div>
                     </a>
