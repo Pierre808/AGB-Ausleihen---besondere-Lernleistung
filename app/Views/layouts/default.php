@@ -45,7 +45,7 @@
 
             <a href="<?= base_url("all-leihgabe") ?>">
                 <div class="menu-link <?php if(esc($menuName) == "leihgaben"){echo("active");} ?>">
-                    <img src="<?= base_url("public/imgs/leihgaben2.png") ?>"/>
+                    <img src="<?= base_url("public/imgs/leihgaben3.png") ?>"/>
                     <p>Alle Leihgaben</p>
                 </div>
             </a>
