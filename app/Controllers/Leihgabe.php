@@ -32,8 +32,12 @@ class Leihgabe extends BaseController
 
         $leihgaben = LeihtHelper::getActiveDesc();
 
+        if(session()->getFlashData('filter-post-schueler') != null)
+        {
+            $_POST['schueler'] = session()->getFlashData('filter-post-schueler');
+        }
 
-        if($this->request->getMethod() == "post")
+        if($this->request->getMethod() == "post" || session()->getFlashData('filter-post-schueler') != null)
         {
             //SQL command
             $sql = "SELECT * FROM leiht";
