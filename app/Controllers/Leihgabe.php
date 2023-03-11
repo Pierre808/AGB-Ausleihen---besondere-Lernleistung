@@ -35,6 +35,7 @@ class Leihgabe extends BaseController
         if(session()->getFlashData('filter-post-schueler') != null)
         {
             $_POST['schueler'] = session()->getFlashData('filter-post-schueler');
+            $_POST['active'] = "yes";
         }
 
         if($this->request->getMethod() == "post" || session()->getFlashData('filter-post-schueler') != null)
