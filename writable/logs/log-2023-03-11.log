@@ -154,3 +154,15 @@ in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 69.
  6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
  7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 17:22:00 --> Class "App\Controllers\hatSchaedenModel" not found
+in APPPATH\Controllers\Gegenstand.php on line 167.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->barcodeBearbeiten('GEab', 'GEe', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 17:22:59 --> Call to a member function update() on array
+in APPPATH\Controllers\Gegenstand.php on line 176.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->barcodeBearbeiten('GEab', 'GEt', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

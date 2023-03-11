@@ -164,6 +164,18 @@ class Gegenstand extends BaseController
                     LeihtHelper::setGegenstandId($leiht[$i]['id'], $newId);
                 }
 
+                $schaedenModel = new HatSchadenModel();
+                $schaeden = $schaedenModel->where('gegenstand_id', $gegenstandId)->FindAll();
+
+                for($i = 0; $i < count($schaeden); $i++)
+                {
+                    $dbData = [
+                        'gegenstand_id' => $newId,
+                    ];
+                    
+                    $schaedenModel->update($schaeden[$i]['id'], $dbData);
+                }
+
                 GegenstandHelper::deleteGegenstand($gegenstandId);
             }
         }
