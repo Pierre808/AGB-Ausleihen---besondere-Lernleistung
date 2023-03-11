@@ -50,6 +50,8 @@ $routes->match(['get', 'post'], '/show-gegenstand/(:segment)', 'Gegenstand::gege
 $routes->get('/edit-gegenstand/(:any)', 'Gegenstand::barcodeBearbeiten/$1/$2');
 $routes->get('/gegenstand-zurueckgeben', 'Gegenstand::gegenstandZurueckgeben');
 $routes->get('/gegenstand-zurueckgeben/(:any)', 'Gegenstand::gegenstandZurueckgeben/$1');
+$routes->get('/schaden-hinzufuegen/(:any)', 'Gegenstand::schadenHinzufuegen/$1/$2');
+$routes->get('/schaden-entfernen/(:any)', 'Gegenstand::schadenEntfernen/$1/$2');
 
 $routes->get('/all-schueler', 'Schueler::registrierteSchueler');
 $routes->match(['get', 'post'], '/add-schueler/(:segment)', 'Schueler::schuelerHinzufuegen/$1');

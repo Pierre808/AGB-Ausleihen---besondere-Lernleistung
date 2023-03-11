@@ -66,11 +66,16 @@
                 <h2>Schäden</h2>
                 
                 <?php
-                if(false)
+                if(count(esc($schaeden)) != 0)
                 {
                 ?>
                     <div class="pList">
-                    
+                        <?php
+                        for($i = 0; $i < count(esc($schaeden)); $i++)
+                        {?>
+                            <p>- <?= esc($schaeden[$i]['bezeichnung']) ?></p>
+                        <?php 
+                        } ?>
                     </div>
                 <?php
                 }
@@ -86,7 +91,7 @@
 
                 <br>
 
-                <button>Schaden hinzufügen</button>
+                <button onclick="location.href='<?= base_url('schaden-hinzufuegen/' . esc($gegenstand['gegenstand_id'])) ?>'">Schaden hinzufügen</button>
             </div>
 
             <div class="container">

@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Libraries\GegenstandHelper;
 use App\Libraries\SchuelerHelper;
 use App\Libraries\LeihtHelper;
+use App\Models\SchadenModel;
+use App\Models\HatSchadenModel;
 
 class Gegenstand extends BaseController
 {
@@ -75,6 +77,10 @@ class Gegenstand extends BaseController
 
         $activeLeihgabe = LeihtHelper::getActiveByGegenstandId($gegenstandId);
         $data['active'] = $activeLeihgabe;
+
+        $hatSchadenM = new hatSchadenModel();
+        $schaeden = $hatSchadenM->where('gegenstand_id', $gegenstandId)->FindAll();
+        $data['schaeden'] = $schaeden;
 
         $allLeihgaben = LeihtHelper::getByGegenstandId($gegenstandId);
         
@@ -205,5 +211,96 @@ class Gegenstand extends BaseController
         $data['error'] = $error;
 
         return view('Gegenstand/gegenstandZurueckgeben', $data);
+    }
+
+    public function schadenHinzufuegen($gegenstandId = false, $schaden = false)
+    {
+        if($gegenstandId == false)
+        {
+            return view('errors/html/error_404');
+        }
+
+        $data['page_title'] = "Schaden hinzufügen";
+        $data['menuName'] = "gegenstand";
+
+        $data['gegenstandId'] = $gegenstandId;
+        
+        if($schaden != false)
+        {
+            $schadenM = new SchadenModel();
+            $schadenDb = $schadenM->where('bezeichnung', $schaden)->Find();
+
+            if($schadenDb == null)
+            {
+                return view('errors/html/error_404');
+            }
+
+
+            $hatSchadenM = new HatSchadenModel();
+
+            $bereitsHinzugefuegt = $hatSchadenM->where('gegenstand_id', $gegenstandId)->where('bezeichnung', $schaden)->Find();
+            if($bereitsHinzugefuegt == null)
+            {
+                $hatSchadenM->insert(
+                    [
+                        'gegenstand_id' => $gegenstandId,
+                        'bezeichnung' => $schaden
+                    ]
+                );
+            }
+
+            return redirect()->to(base_url('show-gegenstand/' . $gegenstandId));
+        }
+
+
+        $hatSchaden = new HatSchadenModel();
+        $schaeden = $hatSchaden->where('gegenstand_id', $gegenstandId)->FindAll();
+
+        $schadenM = new SchadenModel();
+        $restlicheSchaeden = $schadenM->FindAll();
+
+        for($i = 0; $i < count($schaeden); $i++)
+        {
+            $schaeden[$i]['bezeichnungUpper'] = ucfirst($schaeden[$i]['bezeichnung']);
+            for($j = 0; $j < count($restlicheSchaeden); $j++)
+            {
+                if($schaeden[$i]['bezeichnung'] == $restlicheSchaeden[$j]['bezeichnung'])
+                {
+                    unset($restlicheSchaeden[$j]);
+                    $restlicheSchaeden = array_values($restlicheSchaeden);
+                }
+            }
+        }
+
+        for($i = 0; $i < count($restlicheSchaeden); $i++)
+        {
+            $restlicheSchaeden[$i]['bezeichnungUpper'] = ucfirst($restlicheSchaeden[$i]['bezeichnung']);
+        }
+
+        $data['schaeden'] = $schaeden;
+        $data['restlicheSchaeden'] = $restlicheSchaeden;
+
+        return view('Gegenstand/schadenHinzufuegen', $data);
+    }
+
+    public function schadenEntfernen($gegenstandId = false, $schaden = false)
+    {
+        if($gegenstandId == false)
+        {
+            return view('errors/html/error_404');
+        }
+        if($schaden == false)
+        {
+            return view('errors/html/error_404');
+        }
+
+        $hatSchadenM = new hatSchadenModel();
+        $vorhanden = $hatSchadenM->where('gegenstand_id', $gegenstandId)->where('bezeichnung', $schaden)->Find();
+
+        if($vorhanden != null)
+        {
+            $hatSchadenM->delete($vorhanden[0]['id']);
+        }
+        return redirect()->to(base_url('show-gegenstand/' . $gegenstandId));
     }
 }

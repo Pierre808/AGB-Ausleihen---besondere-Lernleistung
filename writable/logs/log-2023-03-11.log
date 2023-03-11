@@ -1,0 +1,156 @@
+CRITICAL - 2023-03-11 15:39:55 --> Class "App\Libraries\HatSchadenModel" not found
+in APPPATH\Controllers\Gegenstand.php on line 222.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 15:46:29 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Controllers\Gegenstand.php on line 228.
+ 1 APPPATH\Controllers\Gegenstand.php(228): count(Object(App\Models\HatSchadenModel))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 15:49:48 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Controllers\Gegenstand.php on line 228.
+ 1 APPPATH\Controllers\Gegenstand.php(228): count(Object(App\Models\HatSchadenModel))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 15:49:49 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Controllers\Gegenstand.php on line 228.
+ 1 APPPATH\Controllers\Gegenstand.php(228): count(Object(App\Models\HatSchadenModel))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 15:49:49 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Controllers\Gegenstand.php on line 228.
+ 1 APPPATH\Controllers\Gegenstand.php(228): count(Object(App\Models\HatSchadenModel))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 15:49:49 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Controllers\Gegenstand.php on line 228.
+ 1 APPPATH\Controllers\Gegenstand.php(228): count(Object(App\Models\HatSchadenModel))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 15:49:50 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Controllers\Gegenstand.php on line 228.
+ 1 APPPATH\Controllers\Gegenstand.php(228): count(Object(App\Models\HatSchadenModel))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 15:49:50 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Controllers\Gegenstand.php on line 228.
+ 1 APPPATH\Controllers\Gegenstand.php(228): count(Object(App\Models\HatSchadenModel))
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 16:02:44 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\SchadenModel given
+in APPPATH\Views\Gegenstand\schadenHinzufuegen.php on line 17.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/schadenHinzufuegen', [], true)
+ 4 APPPATH\Controllers\Gegenstand.php(244): view('Gegenstand/schadenHinzufuegen', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 16:16:37 --> Undefined array key "bezeichnungUpper"
+in APPPATH\Views\Gegenstand\schadenHinzufuegen.php on line 51.
+ 1 APPPATH\Views\Gegenstand\schadenHinzufuegen.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bezeichnungUpper"', 'APPPATH\\Views\\Gegenstand\\schadenHinzufuegen.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\schadenHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/schadenHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(245): view('Gegenstand/schadenHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 16:18:02 --> Undefined variable $j
+in APPPATH\Controllers\Gegenstand.php on line 243.
+ 1 APPPATH\Controllers\Gegenstand.php(243): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $j', 'APPPATH\\Controllers\\Gegenstand.php', 243)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 16:42:44 --> Undefined variable $gegenstandId
+in APPPATH\Views\Gegenstand\schadenHinzufuegen.php on line 49.
+ 1 APPPATH\Views\Gegenstand\schadenHinzufuegen.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gegenstandId', 'APPPATH\\Views\\Gegenstand\\schadenHinzufuegen.php', 49)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\schadenHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/schadenHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(249): view('Gegenstand/schadenHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 16:52:41 --> Call to undefined method App\Models\HatSchadenModel::add
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Gegenstand.php(243): CodeIgniter\Model->__call('add', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa', 'brüchig', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 16:53:29 --> Undefined constant "App\Controllers\redirect"
+in APPPATH\Controllers\Gegenstand.php on line 248.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa', 'brüchig', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 16:58:25 --> Undefined array key 0
+in APPPATH\Views\Gegenstand\schadenHinzufuegen.php on line 28.
+ 1 APPPATH\Views\Gegenstand\schadenHinzufuegen.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\Gegenstand\\schadenHinzufuegen.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Gegenstand\\schadenHinzufuegen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/schadenHinzufuegen', [], true)
+ 5 APPPATH\Controllers\Gegenstand.php(279): view('Gegenstand/schadenHinzufuegen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenHinzufuegen('GEa', 'ROOTPATH\\public')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 17:07:46 --> Undefined variable $hatSchaden
+in APPPATH\Controllers\Gegenstand.php on line 298.
+ 1 APPPATH\Controllers\Gegenstand.php(298): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hatSchaden', 'APPPATH\\Controllers\\Gegenstand.php', 298)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenEntfernen('GEa', 'zerkratzt', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 17:08:06 --> Undefined array key "id"
+in APPPATH\Controllers\Gegenstand.php on line 298.
+ 1 APPPATH\Controllers\Gegenstand.php(298): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Gegenstand.php', 298)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenEntfernen('GEa', 'brüchig', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 17:09:17 --> Undefined array key "bezeichnung"
+in APPPATH\Controllers\Gegenstand.php on line 298.
+ 1 APPPATH\Controllers\Gegenstand.php(298): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bezeichnung"', 'APPPATH\\Controllers\\Gegenstand.php', 298)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenEntfernen('GEa', 'brüchig', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 17:09:32 --> Undefined array key "bezeichnung"
+in APPPATH\Controllers\Gegenstand.php on line 299.
+ 1 APPPATH\Controllers\Gegenstand.php(299): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "bezeichnung"', 'APPPATH\\Controllers\\Gegenstand.php', 299)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->schadenEntfernen('GEa', 'brüchig', 'ROOTPATH\\public')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-11 17:13:21 --> count(): Argument #1 ($value) must be of type Countable|array, App\Models\HatSchadenModel given
+in APPPATH\Views\Gegenstand\gegenstandAnzeigen.php on line 69.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Gegenstand/gegenstandAnzeigen', [], true)
+ 4 APPPATH\Controllers\Gegenstand.php(121): view('Gegenstand/gegenstandAnzeigen', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Gegenstand->gegenstandAnzeigen('GEa')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gegenstand))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

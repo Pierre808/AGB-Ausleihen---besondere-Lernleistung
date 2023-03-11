@@ -32,6 +32,11 @@ body{
   font-weight: normal;
 }
 
+.subtitle{
+  font-size: 1.35em;
+  margin-top: 6vh;
+}
+
 .left-margin{
   margin-left: 2vw;
 }
