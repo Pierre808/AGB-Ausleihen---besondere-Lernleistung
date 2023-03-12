@@ -76,7 +76,7 @@
                     echo("active-text");
                 }
             } ?>">
-                <a href="<?= base_url("add-leihgabe") ?>">    
+                <a href="<?= base_url("select-method") ?>">    
                     <p>Leihgabe erstellen</p>
                 </a>        
             </div>

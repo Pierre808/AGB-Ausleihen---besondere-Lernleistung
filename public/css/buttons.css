@@ -6,6 +6,13 @@
     gap: 4vw;
 }
 
+.buttonlist-vertical{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
 .buttonlist button{
     height: 7vh;
     width: auto;
@@ -19,6 +26,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.buttonlist-vertical button{
+    height: 7vh;
+    border-radius: 12px;
+}
+
+.buttonlist-vertical h3{
+    text-align: center;
 }
 
 .button100{
@@ -37,6 +53,11 @@
     align-items: center;
 }
 
+
+.buttonhundred{
+    width: 100%;
+    margin-left: 0%;
+}
 
 @media screen and (max-width: 900px) {
     .buttonlist button{

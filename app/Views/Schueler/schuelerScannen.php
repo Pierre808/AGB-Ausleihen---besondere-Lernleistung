@@ -17,10 +17,7 @@
         <div class="warning ">
             <p>
                 Um einen Schülerausweis zu scannen wird ein Barcode-reader benötigt. <br>
-                Öffne diese Seite an dem Rechner im A-Turm Keller und scanne den 
-                Schülerausweis des Schülers ein.
-                <!--Bitte öffne diese Seite an dem Rechner im A-Turm Keller und scanne den 
-                Schülerausweis des Schülers ein.-->
+                Diese Seite kann an dem Rechner im A-Turm Keller geöffnet werden, um den Schülerausweis einzuscannen.
             </p>
         </div>
         

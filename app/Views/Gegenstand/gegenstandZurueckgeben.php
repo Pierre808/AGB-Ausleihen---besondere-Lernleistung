@@ -17,8 +17,7 @@
         <div class="warning ">
             <p>
                 Um einen Barcode scannen zu können, wird ein Barcode-reader benötigt. <br>
-                Öffne diese Seite an dem Rechner im A-Turm Keller und scanne den 
-                Schülerausweis des Schülers ein.
+                Diese Seite kann an dem Rechner im A-Turm Keller geöffnet werden, um den Gegenstand einzuscannen.
             </p>
         </div>
         

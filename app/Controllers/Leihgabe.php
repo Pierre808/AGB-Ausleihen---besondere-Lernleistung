@@ -244,6 +244,15 @@ class Leihgabe extends BaseController
         return view('Leihgabe/leihgabeErstellen', $data);
     }
 
+    public function leihgabeErstellenAuswahl()
+    {
+        $data['page_title'] = "Leihgabe erstellen";
+        $data['menuName'] = "add";
+        $data['menuTextName'] = "leihgabe";
+
+        return view('Leihgabe/leihgabeErstellenAuswahl', $data);
+    }
+
     public function leihgabeAnzeigen($id = false)
     {
         if($id == false)
