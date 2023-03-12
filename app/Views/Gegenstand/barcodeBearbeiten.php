@@ -16,9 +16,7 @@
 
         <div class="warning ">
             <p>
-                Um einen Barcode scannen zu können, wird ein Barcode-reader benötigt. <br>
-                Öffne diese Seite an dem Rechner im A-Turm Keller und scanne den 
-                Schülerausweis des Schülers ein.
+                Um einen Barcode scannen zu können, wird ein Barcode-reader benötigt, welcher sich im A-Turm Keller befindet.
             </p>
         </div>
         
@@ -28,7 +26,7 @@
         
         <div class="waiting-success-cointainer">
             <div id="loading-box">
-                <h2>Gegenstand mit Barcode-reader einscannen</h2>
+                <h2>Jetzt Gegenstand mit Barcode-reader einscannen</h2>
                 <div class="loader">
                     <span class="loader-element"></span>
                     <span class="loader-element"></span>

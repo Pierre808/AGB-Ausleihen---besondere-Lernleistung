@@ -21,11 +21,5 @@
 
             <button onclick="location.href='<?= base_url('add-temp-schueler/') ?>'" class="button100 buttonhundred">Schüler temporär ohne Schülerausweis registrieren</button>
         </div>
-        <div class="warning">
-            <p>
-                Diese Funktion soll nur als Übergangslösung verwendet werden (beispielsweise, wenn der/die Schüler*in keinen Schülerausweis mit sich hat).
-                <br> Es sollte möglichst zeitnah der Schülerausweis nachgereicht werden, damit dieser dem Schüler zugeordnet werden kann. 
-            </p>
-        </div>
     </div>
 <?= $this->endSection() ?>

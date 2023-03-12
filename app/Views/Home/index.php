@@ -26,11 +26,13 @@
             {
                 for($i = 0; $i < count(esc($leihgaben)); $i++)
                 { ?>
-                    <div class="container">
-                        <p><span  class="big">Name Schüler: </span><?= esc($leihgaben[$i]['schueler_name']) ?></p>
-                        <p><span  class="big">Gegenstand: </span><?= esc($leihgaben[$i]['gegenstand_bezeichnung']) ?></p>
-                        <p><span  class="big">Überfällig seit: </span><?= esc($leihgaben[$i]['formated_datum_ende']) ?></p>
-                    </div>
+                    <a href="<?= base_url('show-leihgabe/' . esc($leihgaben[$i]['id'])) ?>">
+                        <div class="container">
+                            <p><span  class="big">Name Schüler: </span><?= esc($leihgaben[$i]['schueler_name']) ?></p>
+                            <p><span  class="big">Gegenstand: </span><?= esc($leihgaben[$i]['gegenstand_bezeichnung']) ?></p>
+                            <p><span  class="big">Überfällig seit: </span><?= esc($leihgaben[$i]['formated_datum_ende']) ?></p>
+                        </div>
+                    </a>
                 <?php }
             }
             else

@@ -205,6 +205,8 @@ class Leihgabe extends BaseController
                 }
             }
 
+            $sql .= ' ORDER BY datum_start DESC';
+
             $data['sql'] = $sql;
 
             $db = db_connect();
@@ -222,7 +224,13 @@ class Leihgabe extends BaseController
             $gegenstand = GegenstandHelper::getById($leihgaben[$i]['gegenstand_id']);
             $leihgaben[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
 
-            $leihgaben[$i]['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgaben[$i]['datum_start']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
+            $leihgaben[$i]['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgaben[$i]['datum_start']), "d.m.Y" . ', \u\m ' . "H:i \U\h" . '\r');
+
+            $leihgaben[$i]['formated_datum_ende'] = "/";
+            if($leihgaben[$i]['datum_rueckgabe'] != "")
+            {
+                $leihgaben[$i]['formated_datum_ende'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgaben[$i]['datum_rueckgabe']), "d.m.Y" . ', \u\m ' . "H:i \U\h" . '\r');
+            }
         }
 
         $data['active'] = $leihgaben;
@@ -267,10 +275,10 @@ class Leihgabe extends BaseController
         }
         else
         {
-            $leihgabe['formated_datum_ende'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgabe['datum_ende']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
+            $leihgabe['formated_datum_ende'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgabe['datum_ende']), "d.m.Y" . ', \u\m ' . "H:i \U\h" . '\r');
         }
 
-        $leihgabe['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgabe['datum_start']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
+        $leihgabe['formated_datum_start'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgabe['datum_start']), "d.m.Y" . ', \u\m ' . "H:i \U\h" . '\r');
 
         $leihgabe['zurueck_string'] = "Nein";
         $leihgabe['zurueck_color'] = "red";
@@ -278,6 +286,7 @@ class Leihgabe extends BaseController
         {
             $leihgabe['zurueck_string'] = "Ja";
             $leihgabe['zurueck_color'] = "green";
+            $leihgabe['formated_datum_rueckgabe'] = date_format(date_create_from_format("Y-m-d H:i:s", $leihgabe['datum_rueckgabe']), "d.m.Y" . ', \u\m ' . "H:i \U\h" . '\r');
         }
         
         $schueler = SchuelerHelper::getById($leihgabe['schueler_id']);

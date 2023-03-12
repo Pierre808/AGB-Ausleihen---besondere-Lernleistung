@@ -53,11 +53,11 @@
 
             <div class="input50Div">
                 <div>    
-                    <label for="weitere"><b>Weitere Schüler</b></label>
+                    <label for="weitere"><b>Weitere Schüler</b> (optional)</label>
                     <?= form_input('weitere', set_value('weitere'), ['placeholder'=>'Weitere Schüler, die an der Leihgabe beteiligt sind', 'id' => 'weitere-input'], 'text') ?>
                 </div>
                 <div>
-                    <label for="weitere"><b>Lehrer</b></label>
+                    <label for="weitere"><b>Lehrer</b> (optional)</label>
                     <?= form_input('lehrer', set_value('lehrer'), ['placeholder'=>'Lehrer, der den Gegenstand verleiht', 'id' => 'lehrer-input'], 'text') ?>
                 </div>
             </div>
@@ -78,7 +78,7 @@
         
         <div class="waiting-success-cointainer">
             <div id="loading-box">
-                <h2>Gegenstand mit Barcode-reader einscannen</h2>
+                <h2>Jetzt Gegenstand mit Barcode-reader einscannen</h2>
                 <div class="loader">
                     <span class="loader-element"></span>
                     <span class="loader-element"></span>

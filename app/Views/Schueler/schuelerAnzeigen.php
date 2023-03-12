@@ -32,7 +32,7 @@
                 <?php 
                     if(esc($isTemp))
                     {
-                        echo('<p><span class="red">Temporär registriert. Bitte Schülerausweis hinterlegen</span> (siehe Bearbeiten: Neuen Schülerausweis zuweisen)</p>');
+                        echo('<p><span class="red">Temporär registriert. Bitte Schülerausweis hinterlegen</span> (siehe unten: Neuen Schülerausweis zuweisen)</p>');
                     }
                 ?>
             </div>

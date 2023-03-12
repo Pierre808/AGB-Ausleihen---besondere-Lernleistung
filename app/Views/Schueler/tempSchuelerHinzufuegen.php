@@ -15,9 +15,16 @@
     <div id="main">
         <h1 id="title">Schüler temporär registrieren:</h1>
 
+        <div class="warning">
+            <p>
+                Diese Funktion soll nur als Übergangslösung verwendet werden (beispielsweise, wenn der/die Schüler*in keinen Schülerausweis mit sich hat).
+                <br> Es sollte möglichst zeitnah der Schülerausweis nachgereicht werden, damit dieser dem Schüler zugeordnet werden kann. 
+            </p>
+        </div>
+
         <div class="box-container box-container-top">
 
-            <h2>Schüler Daten</h2>
+            <h2>Schüler Daten anlegen</h2>
 
             <div class="box-container-top">
                 <?= form_open('add-temp-schueler/' . esc($tempId)) ?>

@@ -214,7 +214,7 @@ class Gegenstand extends BaseController
 
             if($error == "")
             {
-                LeihtHelper::setAktiv($aktiveLeihgabe['id'], 0);
+                $leihgabe = LeihtHelper::zurueckgeben($gegenstandId);
                 $schueler = SchuelerHelper::getById($aktiveLeihgabe['schueler_id']);
                 session()->setFlashData('filter-post-schueler', $schueler['name']);
             }

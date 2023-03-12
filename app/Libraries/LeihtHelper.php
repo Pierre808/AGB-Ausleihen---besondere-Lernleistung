@@ -191,4 +191,24 @@ class LeihtHelper
 
         return $leiht;
     }
+
+    public static function zurueckgeben($gegenstandId)
+    {
+        $leihtModel = new LeihtModel();
+
+        $leiht = $leihtModel->where('gegenstand_id', $gegenstandId)->where('aktiv', 1)->Find();
+
+        if($leiht != null)
+        {
+            $data = [
+                'datum_rueckgabe' => date("Y-m-d H:i:s"),
+                'aktiv' => 0,
+            ];
+
+            $leihtModel->update($leiht[0]['id'], $data);
+            return true;
+        }
+
+        return false;
+    }
 }
