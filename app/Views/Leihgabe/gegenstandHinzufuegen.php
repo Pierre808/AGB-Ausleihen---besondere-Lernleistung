@@ -14,6 +14,18 @@
     <div id="main">
         <h1 id="title">Leihgabe erstellen:</h1>
 
+        <?php
+            if(esc($lastGegenstand) != null)
+            { ?>
+                <div class="warning warning-green" id="warning100">
+                    <p class="big">Letzter gescannter Gegenstand: <span class="standart left-margin"><?= $lastGegenstand['bezeichnung'] ?></span></p>
+                </div>    
+            <?php }
+        ?>
+
+        <br>
+        <br>
+
         <!--<div class="warning ">
             <p>
                 Um einen Gegenstand einscannen zu können wird ebebfalls ein Barcode-reader benötigt.

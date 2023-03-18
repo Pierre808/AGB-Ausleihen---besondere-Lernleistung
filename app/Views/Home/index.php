@@ -20,13 +20,13 @@
         </div>
 
         <h1>Überfällige Leihgaben:</h1>
-        <div class="containers-list">
+        <div class="container-list">
             <?php 
             if(count(esc($leihgaben)) != 0)
             {
                 for($i = 0; $i < count(esc($leihgaben)); $i++)
                 { ?>
-                    <a href="<?= base_url('show-leihgabe/' . esc($leihgaben[$i]['id'])) ?>">
+                    <a class="block width100" href="<?= base_url('show-leihgabe/' . esc($leihgaben[$i]['id'])) ?>">
                         <div class="container">
                             <p><span  class="big">Name Schüler: </span><?= esc($leihgaben[$i]['schueler_name']) ?></p>
                             <p><span  class="big">Gegenstand: </span><?= esc($leihgaben[$i]['gegenstand_bezeichnung']) ?></p>

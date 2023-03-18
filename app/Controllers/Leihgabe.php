@@ -316,6 +316,9 @@ class Leihgabe extends BaseController
             return view('errors/html/error_404');
         }
 
+        $lastGegenstand = session()->getFlashdata('last-gegenstand');
+        $data['lastGegenstand'] = $lastGegenstand;
+
         if($gegenstandId != false)
         {
             $gegenstand = GegenstandHelper::getById($gegenstandId);
@@ -370,7 +373,9 @@ class Leihgabe extends BaseController
                     
                     
 
-                    $data['redirect'] = base_url('show-leihgabe/' . $rowId);
+                    //$data['redirect'] = base_url('show-leihgabe/' . $rowId);
+                    $data['redirect'] = base_url('add-gegenstand-to-leihgabe/' . $schuelerId);
+                    session()->setFlashdata('last-gegenstand', $gegenstand);
                 }
                 
             }
