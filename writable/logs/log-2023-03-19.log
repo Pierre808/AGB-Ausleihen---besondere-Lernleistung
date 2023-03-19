@@ -1,0 +1,43 @@
+CRITICAL - 2023-03-19 20:52:48 --> Undefined constant "CodeIgniter\Debug\VENDORPATH"
+in SYSTEMPATH\Debug\Exceptions.php on line 177.
+ 1 SYSTEMPATH\Debug\Exceptions.php(157): CodeIgniter\Debug\Exceptions->isFakerDeprecationError(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Leihgabe.php', 289)
+ 2 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'date_create_from_format(): Passing null to parameter #2 ($datetime) of type string is deprecated', 'APPPATH\\Controllers\\Leihgabe.php', 289)
+ 3 APPPATH\Controllers\Leihgabe.php(289): date_create_from_format('Y-m-d H:i:s', null)
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->leihgabeAnzeigen('81')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 20:59:19 --> The route for "https://localhost/AGB/add-gegenstand-to-leihgabe/AGa" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('https://localhost/AGB/add-gegenstand-to-leihgabe/AGa')
+ 2 SYSTEMPATH\Common.php(860): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Views\Leihgabe\gegenstandHinzufuegen.php(151): redirect('https://localhost/AGB/add-gegenstand-to-leihgabe/AGa')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Leihgabe\\gegenstandHinzufuegen.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Leihgabe/gegenstandHinzufuegen', [], true)
+ 7 APPPATH\Controllers\Leihgabe.php(418): view('Leihgabe/gegenstandHinzufuegen', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->gegenstandHinzufuegen('AGa', 'GEe', 'weitere=', 'lehrer=', 'ROOTPATH\\public')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 21:22:22 --> Call to undefined method CodeIgniter\Session\Session::unsetFlashdate()
+in APPPATH\Controllers\Leihgabe.php on line 255.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->leihgabeErstellen()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 21:23:04 --> Call to undefined method CodeIgniter\Session\Session::unsetFlashdata()
+in APPPATH\Controllers\Leihgabe.php on line 255.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Leihgabe->leihgabeErstellen()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Leihgabe))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 21:24:28 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\Leihgabe.php on line 256.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Leihgabe.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Leihgabe')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Leihgabe')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Leihgabe', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -249,6 +249,12 @@ class Leihgabe extends BaseController
         $data['menuName'] = "add";
         $data['menuTextName'] = "leihgabe";
 
+        $lastGegenstand = session()->getFlashdata('last-gegenstand');
+        if($lastGegenstand != null)
+        {
+            unset($_SESSION['last-gegenstand']);
+        }
+
         return view('Leihgabe/leihgabeErstellen', $data);
     }
 
@@ -317,10 +323,16 @@ class Leihgabe extends BaseController
         }
 
         $lastGegenstand = session()->getFlashdata('last-gegenstand');
+        if($lastGegenstand != null)
+        {
+            session()->setFlashdata('last-gegenstand', $lastGegenstand);
+        }
+        
         $data['lastGegenstand'] = $lastGegenstand;
 
         if($gegenstandId != false)
         {
+
             $gegenstand = GegenstandHelper::getById($gegenstandId);
             $data['gegenstand'] = $gegenstand;
 

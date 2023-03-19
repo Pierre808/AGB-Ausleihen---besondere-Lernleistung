@@ -148,7 +148,7 @@
                     
                     await new Promise(resolve => setTimeout(resolve, 1800));
 
-                    window.location.href = "<?= esc($redirect) ?>"
+                    <?php header('Refresh:1; url= '. esc($redirect)); ?>
                 }
 
                 <?php
