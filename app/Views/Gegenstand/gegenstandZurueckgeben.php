@@ -14,6 +14,19 @@
     <div id="main">
         <h1 id="title">Gegenstand zurückgeben:</h1>
 
+        <?php
+            if(esc($lastInfo) != null)
+            { ?>
+                <div class="warning warning-green" id="warning100">
+                    <p class="big">Letzter gescannter Gegenstand: <span class="standart left-margin"><?= $lastInfo['gegenstand'] ?></span></p>
+                    <p class="big">Ausgeliehen von: <span class="standart left-margin"><?= $lastInfo['schueler'] ?></span></p>
+                </div>    
+            <?php }
+        ?>
+
+        <br>
+        <br>
+
         <div class="warning ">
             <p>
                 Um einen Barcode scannen zu können, wird ein Barcode-reader benötigt, welcher sich im A-Turm Keller befindet.
@@ -94,7 +107,9 @@
 
             await new Promise(resolve => setTimeout(resolve, 1000));
 
-            window.location.href = "<?= base_url("all-leihgabe") ?>/";
+
+            window.location.href = "<?= base_url('gegenstand-zurueckgeben') ?>/";
+            //window.location.href = "<?= base_url("all-leihgabe") ?>/";
         }
 
         async function fail()

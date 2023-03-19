@@ -192,6 +192,9 @@ class Gegenstand extends BaseController
         
         $data['gegenstandId'] = $gegenstandId;
 
+        $lastInfo = session()->getFlashdata('last-zurueckgegeben');
+        $data['lastInfo'] = $lastInfo;
+
         $error = "";
 
         if($gegenstandId != false)
@@ -217,6 +220,11 @@ class Gegenstand extends BaseController
                 $leihgabe = LeihtHelper::zurueckgeben($gegenstandId);
                 $schueler = SchuelerHelper::getById($aktiveLeihgabe['schueler_id']);
                 session()->setFlashData('filter-post-schueler', $schueler['name']);
+                $infos = [
+                    "schueler" => $schueler['name'],
+                    "gegenstand" => $gegenstand['bezeichnung'],
+                ];
+                session()->setFlashdata('last-zurueckgegeben', $infos);
             }
         }
 
