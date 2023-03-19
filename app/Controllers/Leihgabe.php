@@ -337,7 +337,7 @@ class Leihgabe extends BaseController
             $data['gegenstand'] = $gegenstand;
 
             $data['wrongprefix'] = false;
-            if(!str_starts_with($gegenstandId, getenv('GEGENSTAND_PREFIX')))
+            if(!str_starts_with(strtolower($gegenstandId), strtolower(getenv('GEGENSTAND_PREFIX'))))
             {
                 $data['wrongprefix'] = true;
             }
