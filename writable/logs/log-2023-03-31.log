@@ -1,0 +1,53 @@
+CRITICAL - 2023-03-31 15:40:06 --> Call to undefined function App\Controllers\tr_starts_with()
+in APPPATH\Controllers\Home.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index('ge')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-31 15:40:17 --> Call to undefined function App\Controllers\tr_starts_with()
+in APPPATH\Controllers\Home.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index('her')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-31 15:40:27 --> Call to undefined function App\Controllers\tr_starts_with()
+in APPPATH\Controllers\Home.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index('i')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-31 15:40:39 --> Call to undefined function App\Controllers\tr_starts_with()
+in APPPATH\Controllers\Home.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index('i')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-31 15:49:49 --> Undefined variable $gegenstandId
+in APPPATH\Controllers\Home.php on line 35.
+ 1 APPPATH\Controllers\Home.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gegenstandId', 'APPPATH\\Controllers\\Home.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index('GEe')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-31 15:58:07 --> Undefined variable $ueberfaellig
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 60.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ueberfaellig', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 60)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(83): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-31 16:01:46 --> Undefined variable $aktiv
+in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 60.
+ 1 APPPATH\Views\Schueler\schuelerAnzeigen.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aktiv', 'APPPATH\\Views\\Schueler\\schuelerAnzeigen.php', 60)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Schueler\\schuelerAnzeigen.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Schueler/schuelerAnzeigen', [], true)
+ 5 APPPATH\Controllers\Schueler.php(90): view('Schueler/schuelerAnzeigen', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Schueler->schuelerAnzeigen('AGa')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

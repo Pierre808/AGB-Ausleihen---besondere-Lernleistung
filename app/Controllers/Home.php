@@ -14,8 +14,33 @@ class Home extends BaseController
 
     }
 
-    public function index()
+    public function index($code = false)
     {
+        if($code != false)
+        {
+            echo($code);
+            if(str_starts_with($code, getenv('SCHUELER_PREFIX')))
+            {
+                if(SchuelerHelper::getById($code) != null)
+                {
+                    return redirect()->to(base_url("add-gegenstand-to-leihgabe/".$code));
+                }
+                else
+                {
+                    return redirect()->to(base_url("add-schueler/".$code));
+                }
+            }
+            else if(str_starts_with($code, getenv('GEGENSTAND_PREFIX')))
+            {
+                if(LeihtHelper::getActiveByGegenstandId($code) != null)
+                {
+                    return redirect()->to(base_url("gegenstand-zurueckgeben/".$code));
+                }
+            }
+            return redirect()->to(base_url());
+        }
+
+
         $data['page_title'] = "Home";
         $data['menuName'] = "home";
         

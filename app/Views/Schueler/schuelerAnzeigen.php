@@ -54,15 +54,15 @@
             </div>
 
             <div class="container">
-                <h2>Überfällige Leihgaben</h2>
+                <h2>Offene Leihgaben</h2>
 
                 <?php
-                if(esc($ueberfaellig) != null)
+                if(esc($aktiv) != null)
                 {
                 ?>
                     <div>
                         <?php
-                        for($i = 0; $i < count(esc($ueberfaellig)); $i++)
+                        for($i = 0; $i < count(esc($aktiv)); $i++)
                         {
                             $color = "row-light";
 
@@ -71,11 +71,10 @@
                                 $color = "row-dark";
                             }
                         ?>
-                        <a class="width100" href="<?= base_url("show-leihgabe/" . esc($ueberfaellig[$i]['id'])) ?>">
+                        <a class="width100" href="<?= base_url("show-leihgabe/" . esc($aktiv[$i]['id'])) ?>">
                         <div class="container-row <?= $color ?>">
-                            <p class="big">Bezeichnung: <span class="standart left-margin"><?= esc($ueberfaellig[$i]['gegenstand_bezeichnung']) ?></span></p>
-                            <p class="big">Gegenstand-Id: <span class="standart left-margin"><?= esc($ueberfaellig[$i]['gegenstand_id']) ?></span></p>
-                            <p class="big">Überfälllig seit: <span class="standart left-margin"><?= esc($ueberfaellig[$i]['formated_datum_ende']) ?></span></p>
+                            <p class="big">Bezeichnung: <span class="standart left-margin"><?= esc($aktiv[$i]['gegenstand_bezeichnung']) ?></span></p>
+                            <p class="big">Gegenstand-Id: <span class="standart left-margin"><?= esc($aktiv[$i]['gegenstand_id']) ?></span></p>
                         </div>
                         </a>
                         <?php 
@@ -88,7 +87,7 @@
                 {
                 ?>
                     <div class="warning warning-green" id="warning100">
-                        <p>Keine überfälligen Verleihungen</p>
+                        <p>Keine offenen Verleihungen</p>
                     </div>
                     <br>
                 <?php

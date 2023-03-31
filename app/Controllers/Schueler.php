@@ -63,14 +63,22 @@ class Schueler extends BaseController
             $data['isTemp'] = true;
         }
 
-        $ueberfaellig = LeihtHelper::getUeberfaelligBySchuelerId($schuelerId);
+        /*$ueberfaellig = LeihtHelper::getUeberfaelligBySchuelerId($schuelerId);
         for($i = 0; $i < count($ueberfaellig); $i++)
         {
             $gegenstand = GegenstandHelper::getById($ueberfaellig[$i]['gegenstand_id']);
             $ueberfaellig[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];  
             $ueberfaellig[$i]['formated_datum_ende'] = date_format(date_create_from_format("Y-m-d H:i:s", $ueberfaellig[$i]['datum_ende']), "H:i \U\h" . '\r, \a\m ' . "d.m.Y");
         }
-        $data['ueberfaellig'] = $ueberfaellig;
+        $data['ueberfaellig'] = $ueberfaellig;*/
+
+        $aktiv = LeihtHelper::getActiveBySchuelerIdDESC($schuelerId);
+        for($i = 0; $i < count($aktiv); $i++)
+        {
+            $gegenstand = GegenstandHelper::getById($aktiv[$i]['gegenstand_id']);
+            $aktiv[$i]['gegenstand_bezeichnung'] = $gegenstand['bezeichnung'];
+        }
+        $data['aktiv'] = $aktiv;
 
         $verlauf = LeihtHelper::getBySchuelerIdDESC($schuelerId);
         for($i = 0; $i < count($verlauf); $i++)

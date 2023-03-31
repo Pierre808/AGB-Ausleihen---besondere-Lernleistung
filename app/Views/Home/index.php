@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="<?= base_url('public/css/containers.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/warning.css') ?>">
 <link rel="stylesheet" href="<?= base_url('public/css/buttons.css') ?>">
+<link rel="stylesheet" href="<?= base_url('public/css/waiting.css') ?>">
 <?= $this->endSection() ?>
 
 
@@ -17,6 +18,22 @@
             <button onclick="location.href='<?= base_url('select-method') ?>'">Gegenstand verleihen</button>
             <button onclick="location.href='<?= base_url('gegenstand-zurueckgeben') ?>'">Gegenstand zurückgeben</button>
             <button onclick="location.href='<?= base_url('schuelerdaten-anzeigen') ?>'">Schülerdaten anzeigen</button>
+        </div>
+
+        <h1>Barcode scannen</h1>
+        <div class="waiting-success-cointainer">
+            <div id="loading-box">
+                <h2>Jetzt Schülerausweis mit Barcode-reader einscannen</h2>
+                <div class="loader">
+                    <span class="loader-element"></span>
+                    <span class="loader-element"></span>
+                    <span class="loader-element"></span>
+                </div>
+            </div>
+
+            <div id="success-animation">
+                
+            </div>
         </div>
 
         <h1>Überfällige Leihgaben:</h1>
@@ -46,4 +63,33 @@
             ?>
         </div>
     </div>
+
+    <script>
+        let code = '';
+        document.addEventListener("keydown", e => {
+            if(e.key != "Shift" && e.key != "Enter" && e.key != "Control") {
+                code = code + e.key;
+                console.log("code: " + code);
+
+                codeScanned();
+            }
+        });
+
+        /**
+         * prueft, ob Barcode zuende eingegeben ist bzw. keine Eingabe mehr folgt
+         * (500 ms keine Eingabe)
+         */
+        async function codeScanned() {
+            var currentCode = code;
+
+            await new Promise(resolve => setTimeout(resolve, 500));
+            console.log('<?=getenv('SCHUELER_PREFIX')?>');
+            if(currentCode == code) {
+                console.log("finished code: " + code);
+
+                window.location.href = "<?= base_url("index-check") ?>/" + code;
+            }
+        }
+
+    </script>
 <?= $this->endSection() ?>

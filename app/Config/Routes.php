@@ -36,6 +36,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('/index-check/(:segment)', 'Home::index/$1');
 
 $routes->get('/all-leihgabe', 'Leihgabe::alleLeihgaben');
 $routes->match(['get', 'post'], '/all-leihgabe/(:any)', 'Leihgabe::alleLeihgaben/$1');
