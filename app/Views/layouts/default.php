@@ -91,6 +91,10 @@
                 </a>
             </div>
         </div>
+        
+        <div class="menu-footer">
+            <p>Ein Programm von Pierre Equit - Pierre.equit@gmail.com</p>
+        </div>
     </div>
 
 

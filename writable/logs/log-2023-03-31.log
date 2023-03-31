@@ -51,3 +51,228 @@ in APPPATH\Views\Schueler\schuelerAnzeigen.php on line 60.
  7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Schueler))
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 16:14:05 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'AGB'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'AGB', 'Agb2023!', 'agb_ausleihen_d...', 3306, '', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#7 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-31 16:14:05 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `leiht`
+WHERE `aktiv` = :aktiv:', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 16:14:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'AGB'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'AGB', 'Agb2023!', 'agb_ausleihen_d...', 3306, '', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#7 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-31 16:14:09 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `leiht`
+WHERE `aktiv` = :aktiv:', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 16:14:10 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'AGB'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'AGB', 'Agb2023!', 'agb_ausleihen_d...', 3306, '', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#7 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-31 16:14:10 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `leiht`
+WHERE `aktiv` = :aktiv:', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 16:14:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'AGB'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'AGB', 'Agb2023!', 'agb_ausleihen_d...', 3306, '', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#7 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-31 16:14:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `leiht`
+WHERE `aktiv` = :aktiv:', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-31 16:23:06 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'AGB'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'AGB', 'Agb2023!', 'agb_ausleihen_d...', 3306, '', 0)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\xampp\htdocs\AGB\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\xampp\htdocs\AGB\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\xampp\htdocs\AGB\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\xampp\htdocs\AGB\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\xampp\htdocs\AGB\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\xampp\htdocs\AGB\app\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+#6 D:\xampp\htdocs\AGB\app\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+#7 D:\xampp\htdocs\AGB\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#8 D:\xampp\htdocs\AGB\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 D:\xampp\htdocs\AGB\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\AGB\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-31 16:23:06 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `leiht`
+WHERE `aktiv` = :aktiv:', [...], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Libraries\LeihtHelper.php(135): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(47): App\Libraries\LeihtHelper::getUeberfaellig()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
