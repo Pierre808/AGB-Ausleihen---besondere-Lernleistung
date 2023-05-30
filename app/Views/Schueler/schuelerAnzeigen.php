@@ -15,6 +15,8 @@
     <div id="main">
         <h1>Schüler: <?= esc($schueler['name']) ?></h1>
 
+        <a href="<?= base_url('add-gegenstand-to-leihgabe/' . esc($schueler['schueler_id'])) ?>"><button class="bottom-margin" id="smallInputBtn">Diesem Schüler etwas verleihen</button></a>
+
         <div class="container-list">
             <div class="container">
                 <p><span  class="big">Name: </span><?= esc($schueler['name']) ?></p>

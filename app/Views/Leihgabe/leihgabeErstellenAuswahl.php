@@ -15,7 +15,7 @@
         <h1 id="title">Leihgabe erstellen:</h1>
 
         <div class="buttonlist-vertical">
-            <button onclick="location.href='<?= base_url('add-leihgabe/') ?>'" class="button100 buttonhundred">Schüler mit Schülerausweis registrieren</button>
+            <button onclick="location.href='<?= base_url('add-leihgabe/') ?>'" class="button100 buttonhundred">Schüler mit Schülerausweis einscannen</button>
             
             <h3>oder: </h3>
 

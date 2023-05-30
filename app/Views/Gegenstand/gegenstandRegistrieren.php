@@ -141,10 +141,10 @@
                 if(currentCode == code && currentCode != " ") {
                     console.log("finished code: " + code);
 
-                    var bezeichnung = document.getElementsByTagName("input")[0].value;
+                    //var bezeichnung = document.getElementsByTagName("input")[0].value;
 
 
-                    window.location.href = "<?= base_url("add-gegenstand/") ?>/" + code + "/" + bezeichnung;
+                    window.location.href = "<?= base_url("add-gegenstand/") ?>/" + code + "/" + code;
                 }
             }
 

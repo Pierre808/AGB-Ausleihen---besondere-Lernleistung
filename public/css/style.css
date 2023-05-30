@@ -40,6 +40,9 @@ body{
 .left-margin{
   margin-left: 2vw;
 }
+.bottom-margin{
+  margin-bottom: 3vh;
+}
 @media screen and (min-width: 1200px) {
   .left-margin{
     margin-left: 0.5vw;

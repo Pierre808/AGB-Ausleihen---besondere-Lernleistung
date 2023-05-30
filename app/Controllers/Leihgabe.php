@@ -45,7 +45,7 @@ class Leihgabe extends BaseController
             $filterErrors = [];
             $sqlWhere = false;
 
-
+            $empty = false;
 
             $data['post'] = true;
 
@@ -76,8 +76,6 @@ class Leihgabe extends BaseController
             }
 
             
-
-            
             if($this->request->getPost('schueler') != "")
             {
                 $validSchueler = [];
@@ -94,6 +92,7 @@ class Leihgabe extends BaseController
                 if(count($validSchueler) == 0)
                 {
                     array_push($filterErrors, "Keine Schüler mit diesem Namen gefunden");
+                    $empty = true;
                 }
                 else
                 {
@@ -136,6 +135,7 @@ class Leihgabe extends BaseController
                 if(count($validLehrer) == 0)
                 {
                     array_push($filterErrors, "Keine Lehrer mit diesem Namen gefunden");
+                    $empty = true;
                 }
                 else
                 {
@@ -178,6 +178,7 @@ class Leihgabe extends BaseController
                 if(count($validGegenstaende) == 0)
                 {
                     array_push($filterErrors, "Keine Gegenstände mit diesem Namen gefunden");
+                    $empty = true;
                 }
                 else
                 {
@@ -213,6 +214,11 @@ class Leihgabe extends BaseController
             $query = $db->query($sql);
 
             $leihgaben = $query->getResult('array');
+
+            if($empty)
+            {
+                $leihgaben = [];
+            }
         }
 
 
